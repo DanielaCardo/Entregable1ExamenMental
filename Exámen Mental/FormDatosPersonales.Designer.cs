@@ -53,7 +53,7 @@
             cboMunicipio = new ComboBox();
             lblMunicipio = new Label();
             cboDepartamento = new ComboBox();
-            btnGuardar = new Button();
+            btnDatosPGuardar = new Button();
             btnCancelar = new Button();
             gbSexo.SuspendLayout();
             gbDatosResidencia.SuspendLayout();
@@ -94,7 +94,7 @@
             // lblPrimerApellido
             // 
             lblPrimerApellido.AutoSize = true;
-            lblPrimerApellido.Location = new Point(52, 94);
+            lblPrimerApellido.Location = new Point(52, 80);
             lblPrimerApellido.Name = "lblPrimerApellido";
             lblPrimerApellido.Size = new Size(89, 15);
             lblPrimerApellido.TabIndex = 4;
@@ -103,7 +103,7 @@
             // lblSegundoApellido
             // 
             lblSegundoApellido.AutoSize = true;
-            lblSegundoApellido.Location = new Point(380, 99);
+            lblSegundoApellido.Location = new Point(380, 85);
             lblSegundoApellido.Name = "lblSegundoApellido";
             lblSegundoApellido.Size = new Size(101, 15);
             lblSegundoApellido.TabIndex = 5;
@@ -111,14 +111,14 @@
             // 
             // txtPrimerApellido
             // 
-            txtPrimerApellido.Location = new Point(170, 91);
+            txtPrimerApellido.Location = new Point(170, 77);
             txtPrimerApellido.Name = "txtPrimerApellido";
             txtPrimerApellido.Size = new Size(169, 23);
             txtPrimerApellido.TabIndex = 6;
             // 
             // txtSegundoApellido
             // 
-            txtSegundoApellido.Location = new Point(519, 94);
+            txtSegundoApellido.Location = new Point(519, 80);
             txtSegundoApellido.Name = "txtSegundoApellido";
             txtSegundoApellido.Size = new Size(178, 23);
             txtSegundoApellido.TabIndex = 7;
@@ -126,7 +126,7 @@
             // lblTipoDocumento
             // 
             lblTipoDocumento.AutoSize = true;
-            lblTipoDocumento.Location = new Point(52, 142);
+            lblTipoDocumento.Location = new Point(52, 120);
             lblTipoDocumento.Name = "lblTipoDocumento";
             lblTipoDocumento.Size = new Size(96, 15);
             lblTipoDocumento.TabIndex = 8;
@@ -135,7 +135,7 @@
             // lblNumeroDocumento
             // 
             lblNumeroDocumento.AutoSize = true;
-            lblNumeroDocumento.Location = new Point(380, 150);
+            lblNumeroDocumento.Location = new Point(380, 128);
             lblNumeroDocumento.Name = "lblNumeroDocumento";
             lblNumeroDocumento.Size = new Size(117, 15);
             lblNumeroDocumento.TabIndex = 9;
@@ -146,14 +146,14 @@
             cboTipoDocumento.DropDownStyle = ComboBoxStyle.DropDownList;
             cboTipoDocumento.FormattingEnabled = true;
             cboTipoDocumento.Items.AddRange(new object[] { "Cedula de Ciudadania", "Cédula de Extranjería", "Pasaporte", "Tarjeta de Identidad", "Registro Civil", "Otro" });
-            cboTipoDocumento.Location = new Point(170, 142);
+            cboTipoDocumento.Location = new Point(170, 120);
             cboTipoDocumento.Name = "cboTipoDocumento";
             cboTipoDocumento.Size = new Size(169, 23);
             cboTipoDocumento.TabIndex = 10;
             // 
             // txtNumeroDocumento
             // 
-            txtNumeroDocumento.Location = new Point(519, 142);
+            txtNumeroDocumento.Location = new Point(519, 120);
             txtNumeroDocumento.Name = "txtNumeroDocumento";
             txtNumeroDocumento.Size = new Size(178, 23);
             txtNumeroDocumento.TabIndex = 11;
@@ -161,7 +161,7 @@
             // lblFechaNacimiento
             // 
             lblFechaNacimiento.AutoSize = true;
-            lblFechaNacimiento.Location = new Point(52, 201);
+            lblFechaNacimiento.Location = new Point(52, 189);
             lblFechaNacimiento.Name = "lblFechaNacimiento";
             lblFechaNacimiento.Size = new Size(103, 15);
             lblFechaNacimiento.TabIndex = 12;
@@ -170,7 +170,7 @@
             // dtpFechaNacimiento
             // 
             dtpFechaNacimiento.Format = DateTimePickerFormat.Short;
-            dtpFechaNacimiento.Location = new Point(170, 199);
+            dtpFechaNacimiento.Location = new Point(170, 187);
             dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             dtpFechaNacimiento.Size = new Size(169, 23);
             dtpFechaNacimiento.TabIndex = 13;
@@ -178,7 +178,7 @@
             // lblGenero
             // 
             lblGenero.AutoSize = true;
-            lblGenero.Location = new Point(380, 207);
+            lblGenero.Location = new Point(380, 195);
             lblGenero.Name = "lblGenero";
             lblGenero.Size = new Size(32, 15);
             lblGenero.TabIndex = 14;
@@ -208,9 +208,10 @@
             // 
             // gbSexo
             // 
+            gbSexo.BackColor = SystemColors.GradientInactiveCaption;
             gbSexo.Controls.Add(rdbMasculino);
             gbSexo.Controls.Add(rdbFemenino);
-            gbSexo.Location = new Point(437, 190);
+            gbSexo.Location = new Point(437, 178);
             gbSexo.Name = "gbSexo";
             gbSexo.Size = new Size(260, 42);
             gbSexo.TabIndex = 17;
@@ -227,13 +228,14 @@
             // 
             // gbDatosResidencia
             // 
+            gbDatosResidencia.BackColor = SystemColors.GradientInactiveCaption;
             gbDatosResidencia.Controls.Add(txtDireccion);
             gbDatosResidencia.Controls.Add(lblDireccion);
             gbDatosResidencia.Controls.Add(cboMunicipio);
             gbDatosResidencia.Controls.Add(lblMunicipio);
             gbDatosResidencia.Controls.Add(cboDepartamento);
             gbDatosResidencia.Controls.Add(lblDepartamento);
-            gbDatosResidencia.Location = new Point(52, 257);
+            gbDatosResidencia.Location = new Point(52, 245);
             gbDatosResidencia.Name = "gbDatosResidencia";
             gbDatosResidencia.Size = new Size(645, 113);
             gbDatosResidencia.TabIndex = 19;
@@ -283,20 +285,21 @@
             cboDepartamento.Size = new Size(169, 23);
             cboDepartamento.TabIndex = 19;
             // 
-            // btnGuardar
+            // btnDatosPGuardar
             // 
-            btnGuardar.BackColor = SystemColors.GradientInactiveCaption;
-            btnGuardar.Location = new Point(408, 390);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(107, 38);
-            btnGuardar.TabIndex = 20;
-            btnGuardar.Text = "Gu&ardar";
-            btnGuardar.UseVisualStyleBackColor = false;
+            btnDatosPGuardar.BackColor = Color.FromArgb(255, 224, 192);
+            btnDatosPGuardar.Location = new Point(408, 390);
+            btnDatosPGuardar.Name = "btnDatosPGuardar";
+            btnDatosPGuardar.Size = new Size(107, 38);
+            btnDatosPGuardar.TabIndex = 20;
+            btnDatosPGuardar.Text = "Gu&ardar";
+            btnDatosPGuardar.UseVisualStyleBackColor = false;
+            btnDatosPGuardar.Click += btnDatosPGuardar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.BackColor = SystemColors.ScrollBar;
-            btnCancelar.Location = new Point(238, 390);
+            btnCancelar.BackColor = SystemColors.ControlLight;
+            btnCancelar.Location = new Point(266, 390);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(101, 38);
             btnCancelar.TabIndex = 21;
@@ -309,7 +312,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(740, 450);
             Controls.Add(btnCancelar);
-            Controls.Add(btnGuardar);
+            Controls.Add(btnDatosPGuardar);
             Controls.Add(gbDatosResidencia);
             Controls.Add(gbSexo);
             Controls.Add(lblGenero);
@@ -328,7 +331,7 @@
             Controls.Add(txtPrimerNombre);
             Controls.Add(lblPrimerNombre);
             Name = "FormDatosPersonales";
-            Text = "Form1";
+            Text = "Datos Personales";
             gbSexo.ResumeLayout(false);
             gbSexo.PerformLayout();
             gbDatosResidencia.ResumeLayout(false);
@@ -364,7 +367,7 @@
         private Label lblDireccion;
         private ComboBox cboMunicipio;
         private Label lblMunicipio;
-        private Button btnGuardar;
+        private Button btnDatosPGuardar;
         private Button btnCancelar;
     }
 }

@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Exámen_Mental
 {
-    public partial class FormDatosPersonales : Form
+    public partial class FormDatosPersonales : System.Windows.Forms.Form
     {
         public FormDatosPersonales()
         {
             InitializeComponent();
         }
+
+        private void btnDatosPGuardar_Click(object sender, EventArgs e)
+        {
+            var form = new TestMiniMental();
+            form.Show();
+            Hide(); 
+        }
+      
     }
 }

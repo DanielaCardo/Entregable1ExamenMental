@@ -28,42 +28,47 @@
         /// 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIngreso));
             lblUsuario = new Label();
             lblContraseña = new Label();
             txtUsuario = new TextBox();
             txtContraseña = new TextBox();
             btnCancelar = new Button();
             btnAceptar = new Button();
+            picIngreso = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)picIngreso).BeginInit();
             SuspendLayout();
             // 
             // lblUsuario
             // 
             lblUsuario.AutoSize = true;
-            lblUsuario.Location = new Point(246, 91);
+            lblUsuario.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsuario.Location = new Point(408, 112);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(47, 15);
+            lblUsuario.Size = new Size(59, 20);
             lblUsuario.TabIndex = 0;
             lblUsuario.Text = "&Usuario";
             // 
             // lblContraseña
             // 
             lblContraseña.AutoSize = true;
-            lblContraseña.Location = new Point(246, 142);
+            lblContraseña.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblContraseña.Location = new Point(408, 168);
             lblContraseña.Name = "lblContraseña";
-            lblContraseña.Size = new Size(67, 15);
+            lblContraseña.Size = new Size(83, 20);
             lblContraseña.TabIndex = 2;
             lblContraseña.Text = "&Contraseña";
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(332, 83);
+            txtUsuario.Location = new Point(512, 112);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(153, 23);
             txtUsuario.TabIndex = 1;
             // 
             // txtContraseña
             // 
-            txtContraseña.Location = new Point(332, 134);
+            txtContraseña.Location = new Point(512, 168);
             txtContraseña.Name = "txtContraseña";
             txtContraseña.PasswordChar = '*';
             txtContraseña.Size = new Size(153, 23);
@@ -71,25 +76,34 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.BackColor = Color.FromArgb(255, 192, 192);
-            btnCancelar.Location = new Point(246, 240);
+            btnCancelar.BackColor = Color.Gainsboro;
+            btnCancelar.Location = new Point(436, 227);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.Size = new Size(90, 36);
             btnCancelar.TabIndex = 4;
             btnCancelar.Text = "&Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
+            btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += BtnCancelar_Click;
             // 
             // btnAceptar
             // 
-            btnAceptar.BackColor = Color.FromArgb(192, 255, 192);
-            btnAceptar.Location = new Point(410, 240);
+            btnAceptar.BackColor = Color.FromArgb(255, 224, 192);
+            btnAceptar.Location = new Point(556, 227);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(75, 23);
+            btnAceptar.Size = new Size(92, 36);
             btnAceptar.TabIndex = 5;
             btnAceptar.Text = "&Aceptar";
-            btnAceptar.UseVisualStyleBackColor = true;
-            btnAceptar.Click += btnAceptar_Click;
+            btnAceptar.UseVisualStyleBackColor = false;
+            btnAceptar.Click += BtnAceptar_Click;
+            // 
+            // picIngreso
+            // 
+            picIngreso.Image = (Image)resources.GetObject("picIngreso.Image");
+            picIngreso.Location = new Point(146, 73);
+            picIngreso.Name = "picIngreso";
+            picIngreso.Size = new Size(242, 212);
+            picIngreso.TabIndex = 6;
+            picIngreso.TabStop = false;
             // 
             // FormIngreso
             // 
@@ -98,6 +112,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnCancelar;
             ClientSize = new Size(800, 373);
+            Controls.Add(picIngreso);
             Controls.Add(btnAceptar);
             Controls.Add(btnCancelar);
             Controls.Add(txtContraseña);
@@ -109,6 +124,7 @@
             Name = "FormIngreso";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ingreso";
+            ((System.ComponentModel.ISupportInitialize)picIngreso).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -119,5 +135,6 @@
         private TextBox txtContraseña;
         private Button btnCancelar;
         private Button btnAceptar;
+        private PictureBox picIngreso;
     }
 }

@@ -29,18 +29,21 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestMiniMental));
             menuStrip = new MenuStrip();
-            fileMenu = new ToolStripMenuItem();
-            editMenu = new ToolStripMenuItem();
+            examenFísicoToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            verToolStripMenuItem = new ToolStripMenuItem();
             toolStrip = new ToolStrip();
             toolStripSeparator1 = new ToolStripSeparator();
+            toolStripButton1 = new ToolStripButton();
             statusStrip = new StatusStrip();
             toolStripStatusLabel = new ToolStripStatusLabel();
             toolTip = new ToolTip(components);
-            atenciónYCálculoToolStripMenuItem = new ToolStripMenuItem();
-            evocaciónToolStripMenuItem = new ToolStripMenuItem();
-            lenguajeToolStripMenuItem = new ToolStripMenuItem();
-            sección1ToolStripMenuItem = new ToolStripMenuItem();
+            BtnIniciarExamen = new Button();
+            lblDescripcionMiniMental = new Label();
+            lblDescripcionMini = new Label();
+            lblExamenMentalAbreviado = new Label();
             menuStrip.SuspendLayout();
             toolStrip.SuspendLayout();
             statusStrip.SuspendLayout();
@@ -48,7 +51,7 @@
             // 
             // menuStrip
             // 
-            menuStrip.Items.AddRange(new ToolStripItem[] { fileMenu, editMenu, atenciónYCálculoToolStripMenuItem, lenguajeToolStripMenuItem, evocaciónToolStripMenuItem });
+            menuStrip.Items.AddRange(new ToolStripItem[] { examenFísicoToolStripMenuItem, verToolStripMenuItem });
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
             menuStrip.Padding = new Padding(7, 2, 0, 2);
@@ -56,23 +59,28 @@
             menuStrip.TabIndex = 0;
             menuStrip.Text = "MenuStrip";
             // 
-            // fileMenu
+            // examenFísicoToolStripMenuItem
             // 
-            fileMenu.DropDownItems.AddRange(new ToolStripItem[] { sección1ToolStripMenuItem });
-            fileMenu.ImageTransparentColor = SystemColors.ActiveBorder;
-            fileMenu.Name = "fileMenu";
-            fileMenu.Size = new Size(81, 20);
-            fileMenu.Text = "Orientación";
+            examenFísicoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem1 });
+            examenFísicoToolStripMenuItem.Name = "examenFísicoToolStripMenuItem";
+            examenFísicoToolStripMenuItem.Size = new Size(94, 20);
+            examenFísicoToolStripMenuItem.Text = "&Examen Físico";
             // 
-            // editMenu
+            // toolStripMenuItem1
             // 
-            editMenu.Name = "editMenu";
-            editMenu.Size = new Size(67, 20);
-            editMenu.Text = "Memoria";
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(155, 22);
+            toolStripMenuItem1.Text = "Nuevo Registro";
+            // 
+            // verToolStripMenuItem
+            // 
+            verToolStripMenuItem.Name = "verToolStripMenuItem";
+            verToolStripMenuItem.Size = new Size(35, 20);
+            verToolStripMenuItem.Text = "&Ver";
             // 
             // toolStrip
             // 
-            toolStrip.Items.AddRange(new ToolStripItem[] { toolStripSeparator1 });
+            toolStrip.Items.AddRange(new ToolStripItem[] { toolStripSeparator1, toolStripButton1 });
             toolStrip.Location = new Point(0, 24);
             toolStrip.Name = "toolStrip";
             toolStrip.Size = new Size(766, 25);
@@ -83,6 +91,15 @@
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 25);
+            // 
+            // toolStripButton1
+            // 
+            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(23, 22);
+            toolStripButton1.Text = "toolStripButton1";
             // 
             // statusStrip
             // 
@@ -100,39 +117,62 @@
             toolStripStatusLabel.Size = new Size(42, 17);
             toolStripStatusLabel.Text = "Estado";
             // 
-            // atenciónYCálculoToolStripMenuItem
+            // BtnIniciarExamen
             // 
-            atenciónYCálculoToolStripMenuItem.Name = "atenciónYCálculoToolStripMenuItem";
-            atenciónYCálculoToolStripMenuItem.Size = new Size(119, 20);
-            atenciónYCálculoToolStripMenuItem.Text = "Atención y Cálculo";
+            BtnIniciarExamen.BackColor = SystemColors.GradientActiveCaption;
+            BtnIniciarExamen.Font = new Font("Arial", 21.75F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
+            BtnIniciarExamen.ForeColor = SystemColors.ActiveCaptionText;
+            BtnIniciarExamen.Location = new Point(31, 274);
+            BtnIniciarExamen.Name = "BtnIniciarExamen";
+            BtnIniciarExamen.Size = new Size(712, 181);
+            BtnIniciarExamen.TabIndex = 4;
+            BtnIniciarExamen.Text = "Iniciar Exámen";
+            BtnIniciarExamen.UseVisualStyleBackColor = false;
+            BtnIniciarExamen.Click += btnIniciarExamen_Click_1;
             // 
-            // evocaciónToolStripMenuItem
+            // lblDescripcionMiniMental
             // 
-            evocaciónToolStripMenuItem.Name = "evocaciónToolStripMenuItem";
-            evocaciónToolStripMenuItem.Size = new Size(73, 20);
-            evocaciónToolStripMenuItem.Text = "Evocación";
+            lblDescripcionMiniMental.AutoSize = true;
+            lblDescripcionMiniMental.Location = new Point(259, 141);
+            lblDescripcionMiniMental.Name = "lblDescripcionMiniMental";
+            lblDescripcionMiniMental.Size = new Size(0, 15);
+            lblDescripcionMiniMental.TabIndex = 5;
             // 
-            // lenguajeToolStripMenuItem
+            // lblDescripcionMini
             // 
-            lenguajeToolStripMenuItem.Name = "lenguajeToolStripMenuItem";
-            lenguajeToolStripMenuItem.Size = new Size(67, 20);
-            lenguajeToolStripMenuItem.Text = "Lenguaje";
+            lblDescripcionMini.AutoSize = true;
+            lblDescripcionMini.Font = new Font("MS PGothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDescripcionMini.Location = new Point(31, 110);
+            lblDescripcionMini.Name = "lblDescripcionMini";
+            lblDescripcionMini.Size = new Size(703, 152);
+            lblDescripcionMini.TabIndex = 7;
+            lblDescripcionMini.Text = resources.GetString("lblDescripcionMini.Text");
+            lblDescripcionMini.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // sección1ToolStripMenuItem
+            // lblExamenMentalAbreviado
             // 
-            sección1ToolStripMenuItem.Name = "sección1ToolStripMenuItem";
-            sección1ToolStripMenuItem.Size = new Size(180, 22);
-            sección1ToolStripMenuItem.Text = "Sección1";
+            lblExamenMentalAbreviado.AutoSize = true;
+            lblExamenMentalAbreviado.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblExamenMentalAbreviado.Location = new Point(259, 59);
+            lblExamenMentalAbreviado.Name = "lblExamenMentalAbreviado";
+            lblExamenMentalAbreviado.Size = new Size(272, 30);
+            lblExamenMentalAbreviado.TabIndex = 8;
+            lblExamenMentalAbreviado.Text = "Exámen Mental Abreviado";
+            lblExamenMentalAbreviado.TextAlign = ContentAlignment.TopCenter;
             // 
             // TestMiniMental
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(766, 523);
+            Controls.Add(lblExamenMentalAbreviado);
+            Controls.Add(lblDescripcionMini);
+            Controls.Add(lblDescripcionMiniMental);
+            Controls.Add(BtnIniciarExamen);
             Controls.Add(statusStrip);
             Controls.Add(toolStrip);
             Controls.Add(menuStrip);
-            IsMdiContainer = true;
+            ImeMode = ImeMode.Hiragana;
             MainMenuStrip = menuStrip;
             Margin = new Padding(4, 3, 4, 3);
             Name = "TestMiniMental";
@@ -154,13 +194,15 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
-        private System.Windows.Forms.ToolStripMenuItem fileMenu;
-        private System.Windows.Forms.ToolStripMenuItem editMenu;
         private System.Windows.Forms.ToolTip toolTip;
-        private ToolStripMenuItem sección1ToolStripMenuItem;
-        private ToolStripMenuItem atenciónYCálculoToolStripMenuItem;
-        private ToolStripMenuItem evocaciónToolStripMenuItem;
-        private ToolStripMenuItem lenguajeToolStripMenuItem;
+        private Button BtnIniciarExamen;
+        private ToolStripMenuItem examenFísicoToolStripMenuItem;
+        private ToolStripMenuItem verToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private Label lblDescripcionMiniMental;
+        private ToolStripButton toolStripButton1;
+        private Label lblDescripcionMini;
+        private Label lblExamenMentalAbreviado;
     }
 }
 

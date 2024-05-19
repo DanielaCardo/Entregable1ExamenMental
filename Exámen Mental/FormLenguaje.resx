@@ -112,47 +112,47 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>126, 17</value>
-  </metadata>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Compresion obedecer una orden en tres etapas: A continueción le voy a dar
+una orden, escúchela toda y realícela: "Tome esta hoja de papel con su
+mano derecha, doblela por la mitad y pongala en el piso". (De un punto por
+cada una de las ordenes ejecutadas correctamente)</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Para las siguientes dos órdenes utilice una tarjeta u hoja de papel que contenga
+la frase: "cierre sus ojos" indique:
+Hay que pedir de lea y ejecute lo que dice la frase que contiene la tarjeta 
+(Lectura)</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picLenguajePunto11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACRSURBVDhPY/j27dt/SjDYACcnJ7IwigEf3n8kCZNswPNb
-        J/+f6DYF0yA+yQac6Db5f6hWCmwIiE+mC0wIu2DS2Vf/F1x6DefjwlgNyNr34r/0wkdgTMgQDAOQNRNj
-        CIoBOg0rMTTDMLIhIHbriZeYBmDTiIxBGkEYxge5liQDsGGQqykyAISpZwAlmIEywMAAAAc1/Jwvt6sN
-        AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAIUAAABGCAYAAADiplcmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wQAADsEBuJFr7QAABHlJREFUeF7tnIFR4zAQRWmBFmiBEmiBGmiBEqiBGiiBFiiBGmghNy+TP7Mny47t
+        yM5qvW9GI9mxZUn7s7tyjns4Oefv7+/SWk+LPo6EW1HsYUiPYvEwJhei2Hoh1P/39/fp+fn59Pr6Oqu8
+        vLxUz7co1/qe82yuoTw8tDWjK0/x+/t7abVDgvj6+jov3s/Pz/k4CppXSw4TPli4t7e3y1EcworCCmCs
+        vQbd//T0dA4bEQkpChmO2rZLaufm8Pn5eY6/hKa1fXiGPCls+Hh/fz9Pjm91q9yCfkjEpsTWO1YUreZ3
+        N1EwARViPe4dV4g4EAZtO8lrE65dS7/0F5muwocMUzMWNbsAbatw8fY61I9B+ezj4+O/z4Tty7ZVq+/y
+        syhoPl2IYmzxOU/BpeMVmAgTEmP3IQ48B7X6sNfW2ohMiaW93raj4F4U5YKXRlD8w6XX3hfUDMY5vMXj
+        4+P53rH3DPZeBFHrKyJdhQ+BEREBhsKll0bFeNaAU8a0YaUMOcBxGXLKOhpdhQ9qxMA33IaJJVhD2jbC
+        wviEFfs8zlGEvQfK457RXNyIora49pzCBIKgvRWIjufgPfRMBMNYVEpq53rGhSjsotqFp8al802VkVob
+        wD5LkLjyPATIs+1LKr3vaD0OT7jyFHah+XZqhyBDbEFpXI2DXIU8wnoOi72v7KN3XHoK5Q3Uey64nqWd
+        icRITVJLUSiBPce2B5qPG08BDErJHmHDspcBEAALUr7goo334DM7tr3GtSeuRMFi19x0aZyWqD/VGH7K
+        6HiKcozRcCUKBkPIuBcYHFEghFIsVhwpiuV0JwprcMKXPYby+J7C3RLN05Uo2HLee8HxFno5ZsVg21M7
+        kQikp7hgt71aFAQCR/EU4vCikMFrhh/LHTKnWE6XnkJYcZBfMCaw56N6Cs3RlSg85BQWvbOQMETmFMvp
+        2lNYMDbjYYFqniKaGESKYgIZnTHZcaWnWE4YUQiMTn6h3YgdYyRBaC6uRGFzCg+LbcfAQvGbDHlGVFGI
+        9BQjWGOrzStwfim14SNFMY8QohiDX0/Lf8QbTRgpihVowaKJQfNxJQpv7ynGwFNonDWP0WstsEN6igWw
+        gOQUCIMcQ+cioHlk+FiBxshupPZTe++kp1iBdh/6mb32a2qvbYr1FPbzW1gtCm/vKcawW1LGjLcglEQo
+        Co3pKRZiRZHMI7woevBmLWg5v/QUnSIRWDG0EkaTnMIz1lOoRGKL+YT2FCxYD8K9BYmipTgyfHTKlh7v
+        MImm2HIxo9Akp/C80LklXc7hPEVyncwpkgHpKZIBTXIKz6SnWM7hPEXuPq6TOUUyIHOKZECTnCLfU8Qi
+        PUUyIHOKZMDhPEXuPq7TJKfwTHqK5WROkQzInCIZkJ4iGdAkp8j3FLFYLQr+T+zyW2jFsWd7ilIUc+87
+        MjeJgr+2YtE9F8YoUhDzWC0KFpi/y+S/EKJwXKvnnpt7fdmuFX2ucapWO5lmtSh6IEWwjps8hfC++D2N
+        1QOLRdHrAqcY5hM6fCRrOJ3+AZ01LFNa3et2AAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>225, 17</value>
-  </metadata>
-  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>334, 17</value>
-  </metadata>
-  <metadata name="BtnIniciarExamen.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblDescripcionMini.Text" xml:space="preserve">
-    <value>Es una prueba que contiene 11 ítems que evalúa la función cognitiva en la 
-orientación; la memoria, la atención, el cálculo, la evocación o recuerdo, el 
-lenguaje y la capacidad de trazar dos polígonos cruzados. 
-
-
-Esta evaluación cognitiva, se usa  regularmente para valorar el estado cognoscitivo 
-de una persona o detectar una posible demencia. Su aplicación requiere alrededor de 
-siete minutos y suele valorarse entre 1 y 30 puntos.</value>
-  </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>51</value>
-  </metadata>
 </root>

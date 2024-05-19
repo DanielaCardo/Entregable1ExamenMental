@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Exámen_Mental
 {
-    public partial class TestMiniMental : System.Windows.Forms.Form
+    public partial class FormOrientacion : System.Windows.Forms.Form
     {
-        private void btnIniciarExamen_Click_1(object sender, EventArgs e)
+        public FormOrientacion()
         {
-            var form = new FormOrientacion();
+            InitializeComponent();
+        }
+
+        private void btnOrientaGuardar_Click(object sender, EventArgs e)
+        {
+            var form = new FormMemoria();
             form.Show();
             Hide();
         }

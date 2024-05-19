@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Exámen_Mental
 {
-    public partial class Orientacion : Form
+    public partial class FormLenguaje : System.Windows.Forms.Form
     {
-        public Orientacion()
+        public FormLenguaje()
         {
             InitializeComponent();
         }
