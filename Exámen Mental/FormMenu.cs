@@ -10,16 +10,23 @@ using System.Windows.Forms;
 
 namespace Exámen_Mental
 {
-    public partial class FormLenguaje : System.Windows.Forms.Form
+    public partial class FormMenu : Form
     {
-        public FormLenguaje()
+        public FormMenu()
         {
             InitializeComponent();
         }
 
-        private void btnLenguajeVolverMenu_Click(object sender, EventArgs e)
+        private void btnIniciarExamen_Click(object sender, EventArgs e)
         {
-            var form = new FormMenu();
+            var form = new FormOrientacion();
+            form.Show();
+            Hide();
+        }
+
+        private void btnNuevoRegistro_Click(object sender, EventArgs e)
+        {
+            var form = new FormDatosPersonales();
             form.Show();
             Hide();
         }

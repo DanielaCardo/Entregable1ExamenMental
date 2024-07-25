@@ -14,7 +14,7 @@ namespace Exámen_Mental
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
-            var form = new FormDatosPersonales();
+            var form = new  FormMenu();
             form.Show();
             Hide();
         }

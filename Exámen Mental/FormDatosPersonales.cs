@@ -19,7 +19,7 @@ namespace Exámen_Mental
 
         private void btnDatosPGuardar_Click(object sender, EventArgs e)
         {
-            var form = new TestMiniMental();
+            var form = new FormMenu();
             form.Show();
             Hide(); 
         }

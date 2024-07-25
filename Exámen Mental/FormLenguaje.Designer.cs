@@ -77,7 +77,7 @@
             txtFinal = new TextBox();
             label16 = new Label();
             lblFinalHasta30 = new Label();
-            btnResultado = new Button();
+            btnLenguajeVolverMenu = new Button();
             gbLenguaje2.SuspendLayout();
             gbLenguaje.SuspendLayout();
             gbLenguaje3.SuspendLayout();
@@ -555,22 +555,23 @@
             lblFinalHasta30.TabIndex = 1;
             lblFinalHasta30.Text = "/30";
             // 
-            // btnResultado
+            // btnLenguajeVolverMenu
             // 
-            btnResultado.BackColor = SystemColors.GradientInactiveCaption;
-            btnResultado.Location = new Point(473, 600);
-            btnResultado.Name = "btnResultado";
-            btnResultado.Size = new Size(96, 31);
-            btnResultado.TabIndex = 19;
-            btnResultado.Text = "Resultado";
-            btnResultado.UseVisualStyleBackColor = false;
+            btnLenguajeVolverMenu.BackColor = SystemColors.GradientInactiveCaption;
+            btnLenguajeVolverMenu.Location = new Point(473, 600);
+            btnLenguajeVolverMenu.Name = "btnLenguajeVolverMenu";
+            btnLenguajeVolverMenu.Size = new Size(96, 31);
+            btnLenguajeVolverMenu.TabIndex = 19;
+            btnLenguajeVolverMenu.Text = "Volver al Menu";
+            btnLenguajeVolverMenu.UseVisualStyleBackColor = false;
+            btnLenguajeVolverMenu.Click += btnLenguajeVolverMenu_Click;
             // 
             // FormLenguaje
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 671);
-            Controls.Add(btnResultado);
+            Controls.Add(btnLenguajeVolverMenu);
             Controls.Add(groupBox1);
             Controls.Add(gbLenguaje7);
             Controls.Add(gbLenguaje6);
@@ -654,5 +655,6 @@
         private Label lblFinalHasta30;
         private PictureBox picLenguajePunto11;
         private Button btnResultado;
+        private Button btnLenguajeVolverMenu;
     }
 }
