@@ -36,7 +36,6 @@
             lblMemoriaPAcum = new Label();
             gbMemoria2 = new GroupBox();
             cbo3Puntuacion = new ComboBox();
-            txt3PuntajeA = new TextBox();
             lblTextoMemoria = new Label();
             lbl3Hasta3 = new Label();
             lbl3 = new Label();
@@ -100,7 +99,6 @@
             // 
             gbMemoria2.BackColor = SystemColors.GradientInactiveCaption;
             gbMemoria2.Controls.Add(cbo3Puntuacion);
-            gbMemoria2.Controls.Add(txt3PuntajeA);
             gbMemoria2.Controls.Add(lblTextoMemoria);
             gbMemoria2.Controls.Add(lbl3Hasta3);
             gbMemoria2.Controls.Add(lbl3);
@@ -119,13 +117,6 @@
             cbo3Puntuacion.Size = new Size(94, 23);
             cbo3Puntuacion.TabIndex = 4;
             // 
-            // txt3PuntajeA
-            // 
-            txt3PuntajeA.Location = new Point(85, 39);
-            txt3PuntajeA.Name = "txt3PuntajeA";
-            txt3PuntajeA.Size = new Size(23, 23);
-            txt3PuntajeA.TabIndex = 3;
-            // 
             // lblTextoMemoria
             // 
             lblTextoMemoria.AutoSize = true;
@@ -139,9 +130,10 @@
             // lbl3Hasta3
             // 
             lbl3Hasta3.AutoSize = true;
-            lbl3Hasta3.Location = new Point(114, 44);
+            lbl3Hasta3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl3Hasta3.Location = new Point(85, 45);
             lbl3Hasta3.Name = "lbl3Hasta3";
-            lbl3Hasta3.Size = new Size(18, 15);
+            lbl3Hasta3.Size = new Size(20, 17);
             lbl3Hasta3.TabIndex = 1;
             lbl3Hasta3.Text = "/3";
             // 
@@ -163,7 +155,7 @@
             btnMemoriaGuardar.TabIndex = 4;
             btnMemoriaGuardar.Text = "&Guardar";
             btnMemoriaGuardar.UseVisualStyleBackColor = false;
-            btnMemoriaGuardar.Click += this.btnMemoriaGuardar_Click;
+            btnMemoriaGuardar.Click += btnMemoriaGuardar_Click;
             // 
             // btnMemoriaCancelar
             // 
@@ -204,7 +196,6 @@
         private Label lblTextoMemoria;
         private Label lbl3Hasta3;
         private Label lbl3;
-        private TextBox txt3PuntajeA;
         private ComboBox cbo3Puntuacion;
         private Button btnMemoriaGuardar;
         private Button btnMemoriaCancelar;

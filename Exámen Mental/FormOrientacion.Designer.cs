@@ -34,7 +34,6 @@
             lblOrientacion = new Label();
             lblOrientaPuntajeAcum = new Label();
             gbOrientacion2 = new GroupBox();
-            txt1PuntajeA = new TextBox();
             cbo1Punt5 = new ComboBox();
             cbo1Punt4 = new ComboBox();
             cbo1Punt3 = new ComboBox();
@@ -49,7 +48,6 @@
             lbl1 = new Label();
             lbl1Hasta5 = new Label();
             groupBox1 = new GroupBox();
-            txt2PuntuaA = new TextBox();
             cbo2Punt5 = new ComboBox();
             cbo2Punt4 = new ComboBox();
             cbo2Punt3 = new ComboBox();
@@ -123,7 +121,6 @@
             // gbOrientacion2
             // 
             gbOrientacion2.BackColor = SystemColors.GradientInactiveCaption;
-            gbOrientacion2.Controls.Add(txt1PuntajeA);
             gbOrientacion2.Controls.Add(cbo1Punt5);
             gbOrientacion2.Controls.Add(cbo1Punt4);
             gbOrientacion2.Controls.Add(cbo1Punt3);
@@ -143,14 +140,6 @@
             gbOrientacion2.Size = new Size(713, 153);
             gbOrientacion2.TabIndex = 1;
             gbOrientacion2.TabStop = false;
-            // 
-            // txt1PuntajeA
-            // 
-            txt1PuntajeA.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txt1PuntajeA.Location = new Point(94, 67);
-            txt1PuntajeA.Name = "txt1PuntajeA";
-            txt1PuntajeA.Size = new Size(25, 23);
-            txt1PuntajeA.TabIndex = 13;
             // 
             // cbo1Punt5
             // 
@@ -280,9 +269,10 @@
             // lbl1Hasta5
             // 
             lbl1Hasta5.AutoSize = true;
-            lbl1Hasta5.Location = new Point(125, 70);
+            lbl1Hasta5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl1Hasta5.Location = new Point(111, 68);
             lbl1Hasta5.Name = "lbl1Hasta5";
-            lbl1Hasta5.Size = new Size(20, 17);
+            lbl1Hasta5.Size = new Size(19, 15);
             lbl1Hasta5.TabIndex = 1;
             lbl1Hasta5.Text = "/5";
             // 
@@ -290,7 +280,6 @@
             // 
             groupBox1.BackColor = SystemColors.GradientInactiveCaption;
             groupBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            groupBox1.Controls.Add(txt2PuntuaA);
             groupBox1.Controls.Add(cbo2Punt5);
             groupBox1.Controls.Add(cbo2Punt4);
             groupBox1.Controls.Add(cbo2Punt3);
@@ -310,14 +299,6 @@
             groupBox1.Size = new Size(713, 153);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
-            // 
-            // txt2PuntuaA
-            // 
-            txt2PuntuaA.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txt2PuntuaA.Location = new Point(94, 67);
-            txt2PuntuaA.Name = "txt2PuntuaA";
-            txt2PuntuaA.Size = new Size(25, 23);
-            txt2PuntuaA.TabIndex = 14;
             // 
             // cbo2Punt5
             // 
@@ -447,10 +428,10 @@
             // lbl2Hasta5
             // 
             lbl2Hasta5.AutoSize = true;
-            lbl2Hasta5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl2Hasta5.Location = new Point(125, 70);
+            lbl2Hasta5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl2Hasta5.Location = new Point(113, 72);
             lbl2Hasta5.Name = "lbl2Hasta5";
-            lbl2Hasta5.Size = new Size(18, 15);
+            lbl2Hasta5.Size = new Size(19, 15);
             lbl2Hasta5.TabIndex = 1;
             lbl2Hasta5.Text = "/5";
             // 
@@ -463,7 +444,6 @@
             btnOrientaCancelar.TabIndex = 14;
             btnOrientaCancelar.Text = "&Cancelar";
             btnOrientaCancelar.UseVisualStyleBackColor = false;
-          
             // 
             // btnOrientaGuardar
             // 
@@ -534,7 +514,5 @@
         private ComboBox cbo2Punt1;
         private Button btnOrientaCancelar;
         private Button btnOrientaGuardar;
-        private TextBox txt1PuntajeA;
-        private TextBox txt2PuntuaA;
     }
 }

@@ -33,7 +33,6 @@
             btnAtencionCEGuardar = new Button();
             gbAtencionC2 = new GroupBox();
             cbo4Puntuacion = new ComboBox();
-            txt4PuntajeA = new TextBox();
             lblTextoAtencionC = new Label();
             lbl4Hasta5 = new Label();
             lbl4 = new Label();
@@ -49,7 +48,6 @@
             lblEvocacionPAcum = new Label();
             groupBox1 = new GroupBox();
             cbo5Puntuacion = new ComboBox();
-            txt5PuntajeA = new TextBox();
             lblTextoEvocacion = new Label();
             lbl5Hasta3 = new Label();
             lbl5 = new Label();
@@ -84,7 +82,6 @@
             // 
             gbAtencionC2.BackColor = SystemColors.GradientInactiveCaption;
             gbAtencionC2.Controls.Add(cbo4Puntuacion);
-            gbAtencionC2.Controls.Add(txt4PuntajeA);
             gbAtencionC2.Controls.Add(lblTextoAtencionC);
             gbAtencionC2.Controls.Add(lbl4Hasta5);
             gbAtencionC2.Controls.Add(lbl4);
@@ -103,13 +100,6 @@
             cbo4Puntuacion.Size = new Size(94, 23);
             cbo4Puntuacion.TabIndex = 4;
             // 
-            // txt4PuntajeA
-            // 
-            txt4PuntajeA.Location = new Point(81, 38);
-            txt4PuntajeA.Name = "txt4PuntajeA";
-            txt4PuntajeA.Size = new Size(23, 23);
-            txt4PuntajeA.TabIndex = 3;
-            // 
             // lblTextoAtencionC
             // 
             lblTextoAtencionC.AutoSize = true;
@@ -122,9 +112,10 @@
             // lbl4Hasta5
             // 
             lbl4Hasta5.AutoSize = true;
-            lbl4Hasta5.Location = new Point(110, 41);
+            lbl4Hasta5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl4Hasta5.Location = new Point(100, 41);
             lbl4Hasta5.Name = "lbl4Hasta5";
-            lbl4Hasta5.Size = new Size(18, 15);
+            lbl4Hasta5.Size = new Size(19, 15);
             lbl4Hasta5.TabIndex = 1;
             lbl4Hasta5.Text = "/5";
             // 
@@ -231,7 +222,7 @@
             // lblEvocacionPAcum
             // 
             lblEvocacionPAcum.AutoSize = true;
-            lblEvocacionPAcum.Location = new Point(63, 19);
+            lblEvocacionPAcum.Location = new Point(72, 19);
             lblEvocacionPAcum.Name = "lblEvocacionPAcum";
             lblEvocacionPAcum.Size = new Size(78, 34);
             lblEvocacionPAcum.TabIndex = 1;
@@ -241,7 +232,6 @@
             // 
             groupBox1.BackColor = SystemColors.GradientInactiveCaption;
             groupBox1.Controls.Add(cbo5Puntuacion);
-            groupBox1.Controls.Add(txt5PuntajeA);
             groupBox1.Controls.Add(lblTextoEvocacion);
             groupBox1.Controls.Add(lbl5Hasta3);
             groupBox1.Controls.Add(lbl5);
@@ -261,13 +251,6 @@
             cbo5Puntuacion.Size = new Size(94, 23);
             cbo5Puntuacion.TabIndex = 4;
             // 
-            // txt5PuntajeA
-            // 
-            txt5PuntajeA.Location = new Point(81, 16);
-            txt5PuntajeA.Name = "txt5PuntajeA";
-            txt5PuntajeA.Size = new Size(23, 23);
-            txt5PuntajeA.TabIndex = 3;
-            // 
             // lblTextoEvocacion
             // 
             lblTextoEvocacion.AutoSize = true;
@@ -280,9 +263,10 @@
             // lbl5Hasta3
             // 
             lbl5Hasta3.AutoSize = true;
-            lbl5Hasta3.Location = new Point(110, 19);
+            lbl5Hasta3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl5Hasta3.Location = new Point(100, 19);
             lbl5Hasta3.Name = "lbl5Hasta3";
-            lbl5Hasta3.Size = new Size(18, 15);
+            lbl5Hasta3.Size = new Size(19, 15);
             lbl5Hasta3.TabIndex = 1;
             lbl5Hasta3.Text = "/3";
             // 
@@ -325,7 +309,6 @@
         private Button btnAtencionCEGuardar;
         private GroupBox gbAtencionC2;
         private ComboBox cbo4Puntuacion;
-        private TextBox txt4PuntajeA;
         private Label lblTextoAtencionC;
         private Label lbl4Hasta5;
         private Label lbl4;
@@ -341,7 +324,6 @@
         private Label lblEvocacionPAcum;
         private GroupBox groupBox1;
         private ComboBox cbo5Puntuacion;
-        private TextBox txt5PuntajeA;
         private Label lblTextoEvocacion;
         private Label lbl5Hasta3;
         private Label lbl5;

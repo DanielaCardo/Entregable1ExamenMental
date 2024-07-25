@@ -33,13 +33,14 @@
             lblDescripcionMini = new Label();
             btnIniciarExamen = new Button();
             btnNuevoRegistro = new Button();
+            btnMenuSalir = new Button();
             SuspendLayout();
             // 
             // lblExamenMentalAbreviado
             // 
             lblExamenMentalAbreviado.AutoSize = true;
             lblExamenMentalAbreviado.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblExamenMentalAbreviado.Location = new Point(283, 74);
+            lblExamenMentalAbreviado.Location = new Point(281, 50);
             lblExamenMentalAbreviado.Name = "lblExamenMentalAbreviado";
             lblExamenMentalAbreviado.Size = new Size(272, 30);
             lblExamenMentalAbreviado.TabIndex = 9;
@@ -50,7 +51,7 @@
             // 
             lblDescripcionMini.AutoSize = true;
             lblDescripcionMini.Font = new Font("MS PGothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblDescripcionMini.Location = new Point(66, 138);
+            lblDescripcionMini.Location = new Point(64, 114);
             lblDescripcionMini.Name = "lblDescripcionMini";
             lblDescripcionMini.Size = new Size(703, 152);
             lblDescripcionMini.TabIndex = 10;
@@ -61,9 +62,9 @@
             // 
             btnIniciarExamen.BackColor = SystemColors.ActiveCaption;
             btnIniciarExamen.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnIniciarExamen.Location = new Point(225, 320);
+            btnIniciarExamen.Location = new Point(261, 291);
             btnIniciarExamen.Name = "btnIniciarExamen";
-            btnIniciarExamen.Size = new Size(365, 87);
+            btnIniciarExamen.Size = new Size(320, 87);
             btnIniciarExamen.TabIndex = 11;
             btnIniciarExamen.Text = "Iniciar Exámen";
             btnIniciarExamen.UseVisualStyleBackColor = false;
@@ -72,7 +73,7 @@
             // btnNuevoRegistro
             // 
             btnNuevoRegistro.BackColor = SystemColors.ScrollBar;
-            btnNuevoRegistro.Location = new Point(12, 12);
+            btnNuevoRegistro.Location = new Point(21, 12);
             btnNuevoRegistro.Name = "btnNuevoRegistro";
             btnNuevoRegistro.Size = new Size(138, 31);
             btnNuevoRegistro.TabIndex = 12;
@@ -80,11 +81,23 @@
             btnNuevoRegistro.UseVisualStyleBackColor = false;
             btnNuevoRegistro.Click += btnNuevoRegistro_Click;
             // 
+            // btnMenuSalir
+            // 
+            btnMenuSalir.BackColor = SystemColors.ScrollBar;
+            btnMenuSalir.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMenuSalir.Location = new Point(381, 393);
+            btnMenuSalir.Name = "btnMenuSalir";
+            btnMenuSalir.Size = new Size(84, 34);
+            btnMenuSalir.TabIndex = 13;
+            btnMenuSalir.Text = "Salir";
+            btnMenuSalir.UseVisualStyleBackColor = false;
+            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnMenuSalir);
             Controls.Add(btnNuevoRegistro);
             Controls.Add(btnIniciarExamen);
             Controls.Add(lblDescripcionMini);
@@ -101,5 +114,6 @@
         private Label lblDescripcionMini;
         private Button btnIniciarExamen;
         private Button btnNuevoRegistro;
+        private Button btnMenuSalir;
     }
 }
