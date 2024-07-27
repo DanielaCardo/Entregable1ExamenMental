@@ -41,6 +41,8 @@
             lbl3 = new Label();
             btnMemoriaGuardar = new Button();
             btnMemoriaCancelar = new Button();
+            btnSiguienteMemoria = new Button();
+            btnAtrasMemoria = new Button();
             gbMemoria.SuspendLayout();
             gbMemoria2.SuspendLayout();
             SuspendLayout();
@@ -149,7 +151,7 @@
             // btnMemoriaGuardar
             // 
             btnMemoriaGuardar.BackColor = Color.FromArgb(255, 224, 192);
-            btnMemoriaGuardar.Location = new Point(437, 238);
+            btnMemoriaGuardar.Location = new Point(421, 238);
             btnMemoriaGuardar.Name = "btnMemoriaGuardar";
             btnMemoriaGuardar.Size = new Size(83, 35);
             btnMemoriaGuardar.TabIndex = 4;
@@ -160,18 +162,45 @@
             // btnMemoriaCancelar
             // 
             btnMemoriaCancelar.BackColor = SystemColors.ControlLight;
-            btnMemoriaCancelar.Location = new Point(313, 238);
+            btnMemoriaCancelar.Location = new Point(309, 238);
             btnMemoriaCancelar.Name = "btnMemoriaCancelar";
             btnMemoriaCancelar.Size = new Size(83, 35);
             btnMemoriaCancelar.TabIndex = 5;
             btnMemoriaCancelar.Text = "&Cancelar";
             btnMemoriaCancelar.UseVisualStyleBackColor = false;
+            btnMemoriaCancelar.Click += btnMemoriaCancelar_Click;
+            // 
+            // btnSiguienteMemoria
+            // 
+            btnSiguienteMemoria.BackColor = SystemColors.Window;
+            btnSiguienteMemoria.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSiguienteMemoria.Location = new Point(538, 258);
+            btnSiguienteMemoria.Name = "btnSiguienteMemoria";
+            btnSiguienteMemoria.Size = new Size(82, 35);
+            btnSiguienteMemoria.TabIndex = 17;
+            btnSiguienteMemoria.Text = "Siguiente >";
+            btnSiguienteMemoria.UseVisualStyleBackColor = false;
+            btnSiguienteMemoria.Click += btnSiguienteMemoria_Click;
+            // 
+            // btnAtrasMemoria
+            // 
+            btnAtrasMemoria.BackColor = SystemColors.Window;
+            btnAtrasMemoria.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAtrasMemoria.Location = new Point(179, 258);
+            btnAtrasMemoria.Name = "btnAtrasMemoria";
+            btnAtrasMemoria.Size = new Size(85, 35);
+            btnAtrasMemoria.TabIndex = 18;
+            btnAtrasMemoria.Text = "< Atrás";
+            btnAtrasMemoria.UseVisualStyleBackColor = false;
+            btnAtrasMemoria.Click += btnAtrasMemoria_Click;
             // 
             // FormMemoria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnAtrasMemoria);
+            Controls.Add(btnSiguienteMemoria);
             Controls.Add(btnMemoriaCancelar);
             Controls.Add(btnMemoriaGuardar);
             Controls.Add(gbMemoria2);
@@ -199,5 +228,7 @@
         private ComboBox cbo3Puntuacion;
         private Button btnMemoriaGuardar;
         private Button btnMemoriaCancelar;
+        private Button btnSiguienteMemoria;
+        private Button btnAtrasMemoria;
     }
 }

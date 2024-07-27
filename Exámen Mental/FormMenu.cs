@@ -30,5 +30,10 @@ namespace Exámen_Mental
             form.Show();
             Hide();
         }
+
+        private void btnMenuSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

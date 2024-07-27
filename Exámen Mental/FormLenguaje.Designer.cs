@@ -39,8 +39,8 @@
             lblLenguajePuntuacion = new Label();
             lblLenguaje = new Label();
             lblLenguajePAcum = new Label();
-            btnMemoriaCancelar = new Button();
-            btnMemoriaGuardar = new Button();
+            btnLenguajeCancelar = new Button();
+            btnLengiuajeGuardar = new Button();
             gbLenguaje3 = new GroupBox();
             cbo7Lenguaje = new ComboBox();
             lblTexto2Lenguaje = new Label();
@@ -68,6 +68,7 @@
             lbl11Hasta1 = new Label();
             label15 = new Label();
             btnLenguajeVolverMenu = new Button();
+            btnAtrasLenguaje = new Button();
             gbLenguaje2.SuspendLayout();
             gbLenguaje.SuspendLayout();
             gbLenguaje3.SuspendLayout();
@@ -179,25 +180,26 @@
             lblLenguajePAcum.TabIndex = 1;
             lblLenguajePAcum.Text = "   Puntaje \r\nAcumulado";
             // 
-            // btnMemoriaCancelar
+            // btnLenguajeCancelar
             // 
-            btnMemoriaCancelar.BackColor = SystemColors.ControlLight;
-            btnMemoriaCancelar.Location = new Point(287, 600);
-            btnMemoriaCancelar.Name = "btnMemoriaCancelar";
-            btnMemoriaCancelar.Size = new Size(79, 31);
-            btnMemoriaCancelar.TabIndex = 13;
-            btnMemoriaCancelar.Text = "&Cancelar";
-            btnMemoriaCancelar.UseVisualStyleBackColor = false;
+            btnLenguajeCancelar.BackColor = SystemColors.ControlLight;
+            btnLenguajeCancelar.Location = new Point(329, 563);
+            btnLenguajeCancelar.Name = "btnLenguajeCancelar";
+            btnLenguajeCancelar.Size = new Size(87, 33);
+            btnLenguajeCancelar.TabIndex = 13;
+            btnLenguajeCancelar.Text = "&Cancelar";
+            btnLenguajeCancelar.UseVisualStyleBackColor = false;
+            btnLenguajeCancelar.Click += btnLenguajeCancelar_Click;
             // 
-            // btnMemoriaGuardar
+            // btnLengiuajeGuardar
             // 
-            btnMemoriaGuardar.BackColor = Color.FromArgb(255, 224, 192);
-            btnMemoriaGuardar.Location = new Point(383, 600);
-            btnMemoriaGuardar.Name = "btnMemoriaGuardar";
-            btnMemoriaGuardar.Size = new Size(75, 31);
-            btnMemoriaGuardar.TabIndex = 12;
-            btnMemoriaGuardar.Text = "&Guardar";
-            btnMemoriaGuardar.UseVisualStyleBackColor = false;
+            btnLengiuajeGuardar.BackColor = Color.FromArgb(255, 224, 192);
+            btnLengiuajeGuardar.Location = new Point(434, 563);
+            btnLengiuajeGuardar.Name = "btnLengiuajeGuardar";
+            btnLengiuajeGuardar.Size = new Size(85, 33);
+            btnLengiuajeGuardar.TabIndex = 12;
+            btnLengiuajeGuardar.Text = "&Guardar";
+            btnLengiuajeGuardar.UseVisualStyleBackColor = false;
             // 
             // gbLenguaje3
             // 
@@ -465,20 +467,33 @@
             // 
             // btnLenguajeVolverMenu
             // 
-            btnLenguajeVolverMenu.BackColor = SystemColors.GradientInactiveCaption;
-            btnLenguajeVolverMenu.Location = new Point(473, 600);
+            btnLenguajeVolverMenu.BackColor = SystemColors.Window;
+            btnLenguajeVolverMenu.Location = new Point(542, 588);
             btnLenguajeVolverMenu.Name = "btnLenguajeVolverMenu";
-            btnLenguajeVolverMenu.Size = new Size(96, 31);
+            btnLenguajeVolverMenu.Size = new Size(71, 33);
             btnLenguajeVolverMenu.TabIndex = 19;
-            btnLenguajeVolverMenu.Text = "Volver al Menu";
+            btnLenguajeVolverMenu.Text = "Menu >>";
             btnLenguajeVolverMenu.UseVisualStyleBackColor = false;
             btnLenguajeVolverMenu.Click += btnLenguajeVolverMenu_Click;
+            // 
+            // btnAtrasLenguaje
+            // 
+            btnAtrasLenguaje.BackColor = SystemColors.Window;
+            btnAtrasLenguaje.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAtrasLenguaje.Location = new Point(238, 588);
+            btnAtrasLenguaje.Name = "btnAtrasLenguaje";
+            btnAtrasLenguaje.Size = new Size(72, 33);
+            btnAtrasLenguaje.TabIndex = 20;
+            btnAtrasLenguaje.Text = "< Atrás";
+            btnAtrasLenguaje.UseVisualStyleBackColor = false;
+            btnAtrasLenguaje.Click += btnAtrasLenguaje_Click;
             // 
             // FormLenguaje
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 671);
+            Controls.Add(btnAtrasLenguaje);
             Controls.Add(btnLenguajeVolverMenu);
             Controls.Add(gbLenguaje7);
             Controls.Add(gbLenguaje6);
@@ -487,8 +502,8 @@
             Controls.Add(gbLenguaje3);
             Controls.Add(gbLenguaje2);
             Controls.Add(gbLenguaje);
-            Controls.Add(btnMemoriaCancelar);
-            Controls.Add(btnMemoriaGuardar);
+            Controls.Add(btnLenguajeCancelar);
+            Controls.Add(btnLengiuajeGuardar);
             Name = "FormLenguaje";
             Text = "Lenguaje";
             gbLenguaje2.ResumeLayout(false);
@@ -521,8 +536,8 @@
         private Label lblLenguajePuntuacion;
         private Label lblLenguaje;
         private Label lblLenguajePAcum;
-        private Button btnMemoriaCancelar;
-        private Button btnMemoriaGuardar;
+        private Button btnLenguajeCancelar;
+        private Button btnLengiuajeGuardar;
         private GroupBox gbLenguaje3;
         private ComboBox cbo7Lenguaje;
         private Label lblTexto2Lenguaje;
@@ -551,5 +566,6 @@
         private PictureBox picLenguajePunto11;
         private Button btnResultado;
         private Button btnLenguajeVolverMenu;
+        private Button btnAtrasLenguaje;
     }
 }

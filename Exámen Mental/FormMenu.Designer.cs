@@ -91,6 +91,7 @@
             btnMenuSalir.TabIndex = 13;
             btnMenuSalir.Text = "Salir";
             btnMenuSalir.UseVisualStyleBackColor = false;
+            btnMenuSalir.Click += btnMenuSalir_Click;
             // 
             // FormMenu
             // 

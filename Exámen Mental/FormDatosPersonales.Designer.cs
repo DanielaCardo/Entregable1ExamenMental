@@ -305,6 +305,7 @@
             btnCancelar.TabIndex = 21;
             btnCancelar.Text = "Ca&ncelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // FormDatosPersonales
             // 

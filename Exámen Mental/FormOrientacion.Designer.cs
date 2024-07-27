@@ -63,6 +63,8 @@
             lbl2Hasta5 = new Label();
             btnOrientaCancelar = new Button();
             btnOrientaGuardar = new Button();
+            btnOrientaSiguiente = new Button();
+            btnOrientaVolverMenu = new Button();
             gbOrientacion.SuspendLayout();
             gbOrientacion2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -438,17 +440,18 @@
             // btnOrientaCancelar
             // 
             btnOrientaCancelar.BackColor = SystemColors.ControlLight;
-            btnOrientaCancelar.Location = new Point(285, 430);
+            btnOrientaCancelar.Location = new Point(262, 430);
             btnOrientaCancelar.Name = "btnOrientaCancelar";
             btnOrientaCancelar.Size = new Size(83, 32);
             btnOrientaCancelar.TabIndex = 14;
             btnOrientaCancelar.Text = "&Cancelar";
             btnOrientaCancelar.UseVisualStyleBackColor = false;
+            btnOrientaCancelar.Click += btnOrientaCancelar_Click;
             // 
             // btnOrientaGuardar
             // 
             btnOrientaGuardar.BackColor = Color.FromArgb(255, 224, 192);
-            btnOrientaGuardar.Location = new Point(418, 430);
+            btnOrientaGuardar.Location = new Point(368, 430);
             btnOrientaGuardar.Name = "btnOrientaGuardar";
             btnOrientaGuardar.Size = new Size(83, 32);
             btnOrientaGuardar.TabIndex = 15;
@@ -456,11 +459,36 @@
             btnOrientaGuardar.UseVisualStyleBackColor = false;
             btnOrientaGuardar.Click += btnOrientaGuardar_Click;
             // 
+            // btnOrientaSiguiente
+            // 
+            btnOrientaSiguiente.BackColor = SystemColors.Window;
+            btnOrientaSiguiente.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnOrientaSiguiente.Location = new Point(494, 437);
+            btnOrientaSiguiente.Name = "btnOrientaSiguiente";
+            btnOrientaSiguiente.Size = new Size(90, 44);
+            btnOrientaSiguiente.TabIndex = 16;
+            btnOrientaSiguiente.Text = "Siguiente >";
+            btnOrientaSiguiente.UseVisualStyleBackColor = false;
+            btnOrientaSiguiente.Click += btnOrientaSiguiente_Click_1;
+            // 
+            // btnOrientaVolverMenu
+            // 
+            btnOrientaVolverMenu.BackColor = SystemColors.Window;
+            btnOrientaVolverMenu.Location = new Point(138, 443);
+            btnOrientaVolverMenu.Name = "btnOrientaVolverMenu";
+            btnOrientaVolverMenu.Size = new Size(86, 38);
+            btnOrientaVolverMenu.TabIndex = 20;
+            btnOrientaVolverMenu.Text = "<< Menu ";
+            btnOrientaVolverMenu.UseVisualStyleBackColor = false;
+            btnOrientaVolverMenu.Click += btnOrientaVolverMenu_Click;
+            // 
             // FormOrientacion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 493);
+            Controls.Add(btnOrientaVolverMenu);
+            Controls.Add(btnOrientaSiguiente);
             Controls.Add(btnOrientaGuardar);
             Controls.Add(btnOrientaCancelar);
             Controls.Add(groupBox1);
@@ -514,5 +542,7 @@
         private ComboBox cbo2Punt1;
         private Button btnOrientaCancelar;
         private Button btnOrientaGuardar;
+        private Button btnOrientaSiguiente;
+        private Button btnOrientaVolverMenu;
     }
 }

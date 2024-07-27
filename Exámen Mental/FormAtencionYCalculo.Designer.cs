@@ -51,6 +51,8 @@
             lblTextoEvocacion = new Label();
             lbl5Hasta3 = new Label();
             lbl5 = new Label();
+            btnSiguienteAtencion = new Button();
+            btnAtrasAtencionCE = new Button();
             gbAtencionC2.SuspendLayout();
             gbAtencionC.SuspendLayout();
             gbEvocacion.SuspendLayout();
@@ -60,19 +62,20 @@
             // btnAtencionCECancelar
             // 
             btnAtencionCECancelar.BackColor = SystemColors.ControlLight;
-            btnAtencionCECancelar.Location = new Point(338, 355);
+            btnAtencionCECancelar.Location = new Point(311, 355);
             btnAtencionCECancelar.Name = "btnAtencionCECancelar";
-            btnAtencionCECancelar.Size = new Size(85, 32);
+            btnAtencionCECancelar.Size = new Size(74, 33);
             btnAtencionCECancelar.TabIndex = 9;
             btnAtencionCECancelar.Text = "&Cancelar";
             btnAtencionCECancelar.UseVisualStyleBackColor = false;
+            btnAtencionCECancelar.Click += btnAtencionCECancelar_Click;
             // 
             // btnAtencionCEGuardar
             // 
             btnAtencionCEGuardar.BackColor = Color.FromArgb(255, 224, 192);
-            btnAtencionCEGuardar.Location = new Point(446, 355);
+            btnAtencionCEGuardar.Location = new Point(419, 355);
             btnAtencionCEGuardar.Name = "btnAtencionCEGuardar";
-            btnAtencionCEGuardar.Size = new Size(85, 32);
+            btnAtencionCEGuardar.Size = new Size(75, 33);
             btnAtencionCEGuardar.TabIndex = 8;
             btnAtencionCEGuardar.Text = "&Guardar";
             btnAtencionCEGuardar.UseVisualStyleBackColor = false;
@@ -279,11 +282,37 @@
             lbl5.TabIndex = 0;
             lbl5.Text = "5.";
             // 
+            // btnSiguienteAtencion
+            // 
+            btnSiguienteAtencion.BackColor = SystemColors.Window;
+            btnSiguienteAtencion.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSiguienteAtencion.Location = new Point(533, 365);
+            btnSiguienteAtencion.Name = "btnSiguienteAtencion";
+            btnSiguienteAtencion.Size = new Size(83, 35);
+            btnSiguienteAtencion.TabIndex = 18;
+            btnSiguienteAtencion.Text = "Siguiente >";
+            btnSiguienteAtencion.UseVisualStyleBackColor = false;
+            btnSiguienteAtencion.Click += btnSiguienteAtencion_Click;
+            // 
+            // btnAtrasAtencionCE
+            // 
+            btnAtrasAtencionCE.BackColor = SystemColors.Window;
+            btnAtrasAtencionCE.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAtrasAtencionCE.Location = new Point(190, 367);
+            btnAtrasAtencionCE.Name = "btnAtrasAtencionCE";
+            btnAtrasAtencionCE.Size = new Size(78, 33);
+            btnAtrasAtencionCE.TabIndex = 19;
+            btnAtrasAtencionCE.Text = "< Atrás";
+            btnAtrasAtencionCE.UseVisualStyleBackColor = false;
+            btnAtrasAtencionCE.Click += btnAtrasAtencionCE_Click;
+            // 
             // FormAtencionEvocacion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 493);
+            Controls.Add(btnAtrasAtencionCE);
+            Controls.Add(btnSiguienteAtencion);
             Controls.Add(groupBox1);
             Controls.Add(gbEvocacion);
             Controls.Add(btnAtencionCECancelar);
@@ -327,5 +356,7 @@
         private Label lblTextoEvocacion;
         private Label lbl5Hasta3;
         private Label lbl5;
+        private Button btnSiguienteAtencion;
+        private Button btnAtrasAtencionCE;
     }
 }

@@ -23,5 +23,17 @@ namespace Exámen_Mental
             form.Show();
             Hide();
         }
+
+        private void btnLenguajeCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAtrasLenguaje_Click(object sender, EventArgs e)
+        {
+            var form = new FormAtencionEvocacion();
+            form.Show();
+            Hide();
+        }
     }
 }

@@ -23,5 +23,24 @@ namespace Exámen_Mental
             form.Show();
             Hide();
         }
+
+        private void btnAtrasMemoria_Click(object sender, EventArgs e)
+        {
+            var form = new FormOrientacion();
+            form.Show();
+            Hide();
+        }
+
+        private void btnSiguienteMemoria_Click(object sender, EventArgs e)
+        {
+            var form = new FormAtencionEvocacion();
+            form.Show();
+            Hide();
+        }
+
+        private void btnMemoriaCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
