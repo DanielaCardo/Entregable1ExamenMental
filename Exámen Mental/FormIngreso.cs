@@ -12,9 +12,9 @@ namespace Exámen_Mental
             Application.Exit();
         }
 
-        private void BtnAceptar_Click(object sender, EventArgs e)
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
-            var form = new  FormMenu();
+            var form = new FormMenu();
             form.Show();
             Hide();
         }

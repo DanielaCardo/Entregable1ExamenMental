@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="ttpMensajeIngreso.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="picIngreso.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPIAAADQCAYAAAA9DDyZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAASalJREFUeF7tnYe3FNUS7t9fc9d7N6vkKKhEQQQJAiJZJEnOOUdBclZQMKMoiumq
+        vgAADr4B6kKxwAAASalJREFUeF7tnYe3FNUS7t9fc9d7N6vkKKhEQQQJAiJZJEnOOUdBclZQMKMoiumq
         iPmKiUs6kZxzzvXqV9370AwTD+dwzsx0rVVrZrp37w6zv/1V1a69+/9IKKGEUu7k3JnTKWkI5FBCKYcS
         DazxNARyKKGUQ7ly+VJMvXzp4l0aAjmUUDJAQiCHEkoGSAjkUELJAAmBHEooGSAhkEMJJQMkBHIooWSA
         hEAOJZQMkBDIoYSSAVKmQJ47d25MjSfLly+XN954w/91WzZu3Gj7kpGcnBw7z+bNm/0t8YXzRTtnrO1B
@@ -438,4 +441,7 @@
         AAmBHEooGSAhkEMJJQMkBHIooWSAhEAOJZS0F5H/D18Z0QFz4UJwAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="erpErrorIngreso.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>169, 17</value>
+  </metadata>
 </root>

@@ -28,15 +28,19 @@
         /// 
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIngreso));
             lblUsuario = new Label();
             lblContraseña = new Label();
             txtUsuario = new TextBox();
             txtContraseña = new TextBox();
             btnCancelar = new Button();
-            btnAceptar = new Button();
+            btnIngresar = new Button();
             picIngreso = new PictureBox();
+            ttpMensajeIngreso = new ToolTip(components);
+            erpErrorIngreso = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)picIngreso).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)erpErrorIngreso).BeginInit();
             SuspendLayout();
             // 
             // lblUsuario
@@ -65,6 +69,7 @@
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(153, 23);
             txtUsuario.TabIndex = 1;
+            ttpMensajeIngreso.SetToolTip(txtUsuario, "Escriba el usuario");
             // 
             // txtContraseña
             // 
@@ -73,6 +78,7 @@
             txtContraseña.PasswordChar = '*';
             txtContraseña.Size = new Size(153, 23);
             txtContraseña.TabIndex = 3;
+            ttpMensajeIngreso.SetToolTip(txtContraseña, "Escriba su contraseña");
             // 
             // btnCancelar
             // 
@@ -85,16 +91,16 @@
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += BtnCancelar_Click;
             // 
-            // btnAceptar
+            // btnIngresar
             // 
-            btnAceptar.BackColor = Color.FromArgb(255, 224, 192);
-            btnAceptar.Location = new Point(556, 227);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(92, 36);
-            btnAceptar.TabIndex = 5;
-            btnAceptar.Text = "&Aceptar";
-            btnAceptar.UseVisualStyleBackColor = false;
-            btnAceptar.Click += BtnAceptar_Click;
+            btnIngresar.BackColor = Color.FromArgb(255, 224, 192);
+            btnIngresar.Location = new Point(556, 227);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(92, 36);
+            btnIngresar.TabIndex = 5;
+            btnIngresar.Text = "&Ingresar\r\n";
+            btnIngresar.UseVisualStyleBackColor = false;
+            btnIngresar.Click += btnIngresar_Click;
             // 
             // picIngreso
             // 
@@ -105,15 +111,19 @@
             picIngreso.TabIndex = 6;
             picIngreso.TabStop = false;
             // 
+            // erpErrorIngreso
+            // 
+            erpErrorIngreso.ContainerControl = this;
+            // 
             // FormIngreso
             // 
-            AcceptButton = btnAceptar;
+            AcceptButton = btnIngresar;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnCancelar;
             ClientSize = new Size(800, 373);
             Controls.Add(picIngreso);
-            Controls.Add(btnAceptar);
+            Controls.Add(btnIngresar);
             Controls.Add(btnCancelar);
             Controls.Add(txtContraseña);
             Controls.Add(txtUsuario);
@@ -125,6 +135,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ingreso";
             ((System.ComponentModel.ISupportInitialize)picIngreso).EndInit();
+            ((System.ComponentModel.ISupportInitialize)erpErrorIngreso).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -134,7 +145,9 @@
         private TextBox txtUsuario;
         private TextBox txtContraseña;
         private Button btnCancelar;
-        private Button btnAceptar;
+        private Button btnIngresar;
         private PictureBox picIngreso;
+        private ToolTip ttpMensajeIngreso;
+        private ErrorProvider erpErrorIngreso;
     }
 }

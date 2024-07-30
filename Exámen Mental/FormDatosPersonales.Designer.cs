@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblPrimerNombre = new Label();
             txtPrimerNombre = new TextBox();
             lblSegundoNombre = new Label();
@@ -55,8 +56,11 @@
             cboDepartamento = new ComboBox();
             btnDatosPGuardar = new Button();
             btnCancelar = new Button();
+            ttpMensaje = new ToolTip(components);
+            erpError = new ErrorProvider(components);
             gbSexo.SuspendLayout();
             gbDatosResidencia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)erpError).BeginInit();
             SuspendLayout();
             // 
             // lblPrimerNombre
@@ -74,6 +78,8 @@
             txtPrimerNombre.Name = "txtPrimerNombre";
             txtPrimerNombre.Size = new Size(169, 23);
             txtPrimerNombre.TabIndex = 1;
+            ttpMensaje.SetToolTip(txtPrimerNombre, "Ingrese el primer nombre\r\n\r\n\r\n");
+            txtPrimerNombre.TextChanged += txtPrimerNombre_TextChanged;
             // 
             // lblSegundoNombre
             // 
@@ -90,6 +96,7 @@
             txtSegundoNombre.Name = "txtSegundoNombre";
             txtSegundoNombre.Size = new Size(178, 23);
             txtSegundoNombre.TabIndex = 3;
+            ttpMensaje.SetToolTip(txtSegundoNombre, "Ingrese segundo nombre");
             // 
             // lblPrimerApellido
             // 
@@ -115,6 +122,7 @@
             txtPrimerApellido.Name = "txtPrimerApellido";
             txtPrimerApellido.Size = new Size(169, 23);
             txtPrimerApellido.TabIndex = 6;
+            ttpMensaje.SetToolTip(txtPrimerApellido, "Ingrese primer apellido");
             // 
             // txtSegundoApellido
             // 
@@ -122,6 +130,7 @@
             txtSegundoApellido.Name = "txtSegundoApellido";
             txtSegundoApellido.Size = new Size(178, 23);
             txtSegundoApellido.TabIndex = 7;
+            ttpMensaje.SetToolTip(txtSegundoApellido, "Ingrese segundo apellido");
             // 
             // lblTipoDocumento
             // 
@@ -150,6 +159,7 @@
             cboTipoDocumento.Name = "cboTipoDocumento";
             cboTipoDocumento.Size = new Size(169, 23);
             cboTipoDocumento.TabIndex = 10;
+            ttpMensaje.SetToolTip(cboTipoDocumento, "Seleccione tipo de documento");
             // 
             // txtNumeroDocumento
             // 
@@ -157,6 +167,7 @@
             txtNumeroDocumento.Name = "txtNumeroDocumento";
             txtNumeroDocumento.Size = new Size(178, 23);
             txtNumeroDocumento.TabIndex = 11;
+            ttpMensaje.SetToolTip(txtNumeroDocumento, "Ingrese el numero de documento");
             // 
             // lblFechaNacimiento
             // 
@@ -174,6 +185,7 @@
             dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             dtpFechaNacimiento.Size = new Size(169, 23);
             dtpFechaNacimiento.TabIndex = 13;
+            ttpMensaje.SetToolTip(dtpFechaNacimiento, "Seleccione la fecha de nacimiento");
             // 
             // lblGenero
             // 
@@ -216,6 +228,7 @@
             gbSexo.Size = new Size(260, 42);
             gbSexo.TabIndex = 17;
             gbSexo.TabStop = false;
+            ttpMensaje.SetToolTip(gbSexo, "Seleccione una de las opciones ");
             // 
             // lblDepartamento
             // 
@@ -248,6 +261,7 @@
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(468, 23);
             txtDireccion.TabIndex = 23;
+            ttpMensaje.SetToolTip(txtDireccion, "Ingrese la direccion de residencia");
             // 
             // lblDireccion
             // 
@@ -266,6 +280,7 @@
             cboMunicipio.Name = "cboMunicipio";
             cboMunicipio.Size = new Size(176, 23);
             cboMunicipio.TabIndex = 21;
+            ttpMensaje.SetToolTip(cboMunicipio, "Seleccione el municipio de residencia");
             // 
             // lblMunicipio
             // 
@@ -284,6 +299,7 @@
             cboDepartamento.Name = "cboDepartamento";
             cboDepartamento.Size = new Size(169, 23);
             cboDepartamento.TabIndex = 19;
+            ttpMensaje.SetToolTip(cboDepartamento, "Seleccione el departamento de residencia");
             // 
             // btnDatosPGuardar
             // 
@@ -306,6 +322,10 @@
             btnCancelar.Text = "Ca&ncelar";
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
+            // 
+            // erpError
+            // 
+            erpError.ContainerControl = this;
             // 
             // FormDatosPersonales
             // 
@@ -337,6 +357,7 @@
             gbSexo.PerformLayout();
             gbDatosResidencia.ResumeLayout(false);
             gbDatosResidencia.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)erpError).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -370,5 +391,7 @@
         private Label lblMunicipio;
         private Button btnDatosPGuardar;
         private Button btnCancelar;
+        private ToolTip ttpMensaje;
+        private ErrorProvider erpError;
     }
 }

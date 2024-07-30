@@ -19,15 +19,23 @@ namespace Exámen_Mental
         }
 
         private void btnDatosPGuardar_Click(object sender, EventArgs e)
-         
+
         {
             try
             {
-                string primerNombre = txtPrimerNombre.Text.Trim();
-                string primerApellido = txtPrimerApellido.Text.Trim();
-                string tipoDocumento = cboTipoDocumento.Text.Trim();
-                string documento = txtNumeroDocumento.Text.Trim();
-                string fechaNacimiento = dtpFechaNacimiento.Text.Trim();
+                var primerNombre = txtPrimerNombre.Text.Trim();
+                var primerApellido = txtPrimerApellido.Text.Trim();
+                var segundoNombre = txtPrimerNombre.Text.Trim();
+                var segundoApellido = txtPrimerApellido.Text.Trim();
+                var tipoDocumento = cboTipoDocumento.Text.Trim();
+                var documento = txtNumeroDocumento.Text.Trim();
+                var fechaNacimiento = dtpFechaNacimiento.Value;
+                    DateTime fechaActual = DateTime.Today;
+                var sexo = rdbFemenino.Checked ? "Femenino" :
+                           rdbMasculino.Checked ? "Masculino": "No definido";
+                var departamento = cboDepartamento.Text.Trim();
+                var municipio = cboMunicipio.Text.Trim();
+                var direccion = txtDireccion.Text.Trim();
 
 
                 if (string.IsNullOrEmpty(primerNombre))
@@ -66,7 +74,7 @@ namespace Exámen_Mental
                 }
 
             }
-             
+
             catch (Exception exc)
 
             {
@@ -84,7 +92,17 @@ namespace Exámen_Mental
         {
             this.Close();
         }
+
+        private void txtPrimerNombre_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
+
+
+
+
+
 
 }
 
