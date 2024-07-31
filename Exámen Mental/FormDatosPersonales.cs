@@ -8,6 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Exámen_Mental
 {
@@ -23,86 +24,114 @@ namespace Exámen_Mental
         {
             try
             {
-                var primerNombre = txtPrimerNombre.Text.Trim();
-                var primerApellido = txtPrimerApellido.Text.Trim();
-                var segundoNombre = txtPrimerNombre.Text.Trim();
-                var segundoApellido = txtPrimerApellido.Text.Trim();
-                var tipoDocumento = cboTipoDocumento.Text.Trim();
-                var documento = txtNumeroDocumento.Text.Trim();
-                var fechaNacimiento = dtpFechaNacimiento.Value;
+                if (ValidarDatos())
+
+                {
+                    // Declaracion de variables 
+                    var primerNombre = txtPrimerNombre.Text.Trim();
+                    var primerApellido = txtPrimerApellido.Text.Trim();
+                    var segundoNombre = txtSegundoNombre.Text.Trim();
+                    var segundoApellido = txtSegundoApellido.Text.Trim();
+                    var tipoDocumento = cboTipoDocumento.Text.Trim();
+                    var documento = txtNumeroDocumento.Text.Trim();
+                    var fechaNacimiento = dtpFechaNacimiento.Value;
                     DateTime fechaActual = DateTime.Today;
-                var sexo = rdbFemenino.Checked ? "Femenino" :
-                           rdbMasculino.Checked ? "Masculino": "No definido";
-                var departamento = cboDepartamento.Text.Trim();
-                var municipio = cboMunicipio.Text.Trim();
-                var direccion = txtDireccion.Text.Trim();
+                    var sexo = rdbFemenino.Checked ? "Femenino" :
+                               rdbMasculino.Checked ? "Masculino" : "No definido";
+                    var departamento = cboDepartamento.Text.Trim();
+                    var municipio = cboMunicipio.Text.Trim();
+                    var direccion = txtDireccion.Text.Trim();
 
+                    // Cadena de mensaje que contine los datos que el usuario ingresa
+                    string mensaje = $"Primer Nombre {primerNombre} \n" +
+                                    $"Segundo Nombre {segundoNombre} \n" +
+                                    $"Primer Apellido {primerApellido} \n" +
+                                    $"Segundo Apellido {segundoApellido} \n" +
+                                    $"Tipo Documento {tipoDocumento} \n" +
+                                    $"Número de Documento {documento} \n" +
+                                    $"Fecha de Nacimiento {fechaNacimiento}\n" +
+                                    $"Sexo {sexo} \n" +
+                                    $"Departamento {departamento}\n" +
+                                    $"Municipio {municipio}\n" +
+                                    $"Dirección  {direccion}\n";
 
-                if (string.IsNullOrEmpty(primerNombre))
-                {
-                    MessageBox.Show("El primer nombre es obligatorio.");
-                    txtPrimerNombre.Focus();
-                    return;
+                    // Muestra el mensaje con todos los datos ingresados 
+                    MessageBox.Show(mensaje, this.Text,
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Information);
                 }
 
-                if (string.IsNullOrEmpty(primerApellido))
-                {
-                    MessageBox.Show("El primer apellido es obligatorio.");
-                    txtPrimerApellido.Focus();
-                    return;
-                }
+                else
 
-                if (string.IsNullOrEmpty(tipoDocumento))
-                {
-                    MessageBox.Show("El tipo de documento es obligatorio.");
-                    cboTipoDocumento.Focus();
-                    return;
-                }
-
-                if (string.IsNullOrEmpty(documento))
-                {
-                    MessageBox.Show("El documento es obligatorio.");
-                    txtNumeroDocumento.Focus();
-                    return;
-                }
-
-                if (string.IsNullOrEmpty(fechaNacimiento))
-                {
-                    MessageBox.Show("La fecha de nacimiento es obligatoria.");
-                    dtpFechaNacimiento.Focus();
-                    return;
+                {   // Mensaje de error si la condicion anterior no se cumple
+                    MessageBox.Show("Por favor, revise los datos ingresados",
+                     this.Text,
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Error);
                 }
 
             }
-
-            catch (Exception exc)
-
+            //Excepciones en la ejecución _ muestra un mensaje de error
+            catch (Exception ex)
             {
-                MessageBox.Show(" No fue posible realizar el registro");
-
+                MessageBox.Show("Error inesperado, no fue possible realizar el registro" + ex.Message,
+                    this.Text,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
-
-            var form = new FormMenu();
-            form.Show();
-            Hide();
-
         }
 
+        private bool ValidarDatos() // Validas los campos que deben ser obligatorios
+        {
+            erpError.SetError(txtPrimerNombre, null);  // Error provider para la caja de texto primer nombre
+            if (string.IsNullOrEmpty(txtPrimerNombre.Text)) // Si se encuntra vacio o nulo
+            {
+                erpError.SetError(txtPrimerNombre, "El primer nombre es obligatorio");// Mostrar este mensaje
+                return false; // Regresar
+            }
+
+            erpError.SetError(txtPrimerApellido, null);
+            if (string.IsNullOrEmpty(txtPrimerApellido.Text))
+            {
+                erpError.SetError(txtPrimerApellido, "El primer apellido es obligatorio");
+                return false;
+            }
+
+            erpError.SetError(cboTipoDocumento, null);
+            if (string.IsNullOrEmpty(cboTipoDocumento.Text))
+            {
+                erpError.SetError(cboTipoDocumento, "Este campo es obligatorio");
+                return false;
+            }
+
+            erpError.SetError(txtNumeroDocumento, null);
+            if (string.IsNullOrEmpty(txtNumeroDocumento.Text))
+            {
+                erpError.SetError(txtNumeroDocumento, "El número de documento es obligatorio");
+                return false;
+            }
+
+            erpError.SetError(dtpFechaNacimiento, null);
+            if (dtpFechaNacimiento.Value > DateTime.Now)
+            {
+                erpError.SetError(dtpFechaNacimiento, "La fecha de nacimiento " +
+                    "debe ser menor a la fecha actual");
+                return false;
+            }
+
+            return true;
+        }
+      
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void txtPrimerNombre_TextChanged(object sender, EventArgs e)
+        private void btnDatosMenu_Click(object sender, EventArgs e)
         {
-            
+            var form = new FormMenu();
+            form.Show();
+            Hide();
         }
     }
-
-
-
-
-
-
 }
-

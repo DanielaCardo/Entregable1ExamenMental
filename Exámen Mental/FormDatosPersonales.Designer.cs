@@ -58,6 +58,7 @@
             btnCancelar = new Button();
             ttpMensaje = new ToolTip(components);
             erpError = new ErrorProvider(components);
+            btnDatosMenu = new Button();
             gbSexo.SuspendLayout();
             gbDatosResidencia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)erpError).BeginInit();
@@ -79,7 +80,6 @@
             txtPrimerNombre.Size = new Size(169, 23);
             txtPrimerNombre.TabIndex = 1;
             ttpMensaje.SetToolTip(txtPrimerNombre, "Ingrese el primer nombre\r\n\r\n\r\n");
-            txtPrimerNombre.TextChanged += txtPrimerNombre_TextChanged;
             // 
             // lblSegundoNombre
             // 
@@ -304,22 +304,24 @@
             // btnDatosPGuardar
             // 
             btnDatosPGuardar.BackColor = Color.FromArgb(255, 224, 192);
-            btnDatosPGuardar.Location = new Point(408, 390);
+            btnDatosPGuardar.Location = new Point(380, 390);
             btnDatosPGuardar.Name = "btnDatosPGuardar";
-            btnDatosPGuardar.Size = new Size(107, 38);
+            btnDatosPGuardar.Size = new Size(86, 38);
             btnDatosPGuardar.TabIndex = 20;
             btnDatosPGuardar.Text = "Gu&ardar";
+            ttpMensaje.SetToolTip(btnDatosPGuardar, "Guardar datos personales");
             btnDatosPGuardar.UseVisualStyleBackColor = false;
             btnDatosPGuardar.Click += btnDatosPGuardar_Click;
             // 
             // btnCancelar
             // 
             btnCancelar.BackColor = SystemColors.ControlLight;
-            btnCancelar.Location = new Point(266, 390);
+            btnCancelar.Location = new Point(251, 390);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(101, 38);
+            btnCancelar.Size = new Size(88, 38);
             btnCancelar.TabIndex = 21;
             btnCancelar.Text = "Ca&ncelar";
+            ttpMensaje.SetToolTip(btnCancelar, "Cancelar el nuevo registro");
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
@@ -327,11 +329,23 @@
             // 
             erpError.ContainerControl = this;
             // 
+            // btnDatosMenu
+            // 
+            btnDatosMenu.Location = new Point(505, 401);
+            btnDatosMenu.Name = "btnDatosMenu";
+            btnDatosMenu.Size = new Size(81, 37);
+            btnDatosMenu.TabIndex = 22;
+            btnDatosMenu.Text = "Menú >>";
+            ttpMensaje.SetToolTip(btnDatosMenu, "Regresar al menú principal");
+            btnDatosMenu.UseVisualStyleBackColor = true;
+            btnDatosMenu.Click += btnDatosMenu_Click;
+            // 
             // FormDatosPersonales
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(740, 450);
+            Controls.Add(btnDatosMenu);
             Controls.Add(btnCancelar);
             Controls.Add(btnDatosPGuardar);
             Controls.Add(gbDatosResidencia);
@@ -393,5 +407,6 @@
         private Button btnCancelar;
         private ToolTip ttpMensaje;
         private ErrorProvider erpError;
+        private Button btnDatosMenu;
     }
 }
