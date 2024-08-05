@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAtencionEvocacion));
             btnAtencionCECancelar = new Button();
             btnAtencionCEGuardar = new Button();
@@ -53,6 +54,7 @@
             lbl5 = new Label();
             btnSiguienteAtencion = new Button();
             btnAtrasAtencionCE = new Button();
+            ttpMensajeAtencionCE = new ToolTip(components);
             gbAtencionC2.SuspendLayout();
             gbAtencionC.SuspendLayout();
             gbEvocacion.SuspendLayout();
@@ -67,6 +69,7 @@
             btnAtencionCECancelar.Size = new Size(74, 33);
             btnAtencionCECancelar.TabIndex = 9;
             btnAtencionCECancelar.Text = "&Cancelar";
+            ttpMensajeAtencionCE.SetToolTip(btnAtencionCECancelar, "Cancelar formulario");
             btnAtencionCECancelar.UseVisualStyleBackColor = false;
             btnAtencionCECancelar.Click += btnAtencionCECancelar_Click;
             // 
@@ -78,6 +81,7 @@
             btnAtencionCEGuardar.Size = new Size(75, 33);
             btnAtencionCEGuardar.TabIndex = 8;
             btnAtencionCEGuardar.Text = "&Guardar";
+            ttpMensajeAtencionCE.SetToolTip(btnAtencionCEGuardar, "Guardar respuestas");
             btnAtencionCEGuardar.UseVisualStyleBackColor = false;
             btnAtencionCEGuardar.Click += btnAtencionCEGuardar_Click;
             // 
@@ -291,6 +295,7 @@
             btnSiguienteAtencion.Size = new Size(83, 35);
             btnSiguienteAtencion.TabIndex = 18;
             btnSiguienteAtencion.Text = "Siguiente >";
+            ttpMensajeAtencionCE.SetToolTip(btnSiguienteAtencion, "Pasar al siguiente formulario");
             btnSiguienteAtencion.UseVisualStyleBackColor = false;
             btnSiguienteAtencion.Click += btnSiguienteAtencion_Click;
             // 
@@ -303,6 +308,7 @@
             btnAtrasAtencionCE.Size = new Size(78, 33);
             btnAtrasAtencionCE.TabIndex = 19;
             btnAtrasAtencionCE.Text = "< Atrás";
+            ttpMensajeAtencionCE.SetToolTip(btnAtrasAtencionCE, "Regresar al formulario anterior");
             btnAtrasAtencionCE.UseVisualStyleBackColor = false;
             btnAtrasAtencionCE.Click += btnAtrasAtencionCE_Click;
             // 
@@ -358,5 +364,6 @@
         private Label lbl5;
         private Button btnSiguienteAtencion;
         private Button btnAtrasAtencionCE;
+        private ToolTip ttpMensajeAtencionCE;
     }
 }

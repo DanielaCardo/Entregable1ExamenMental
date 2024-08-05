@@ -127,4 +127,7 @@ Esta evaluación cognitiva, se usa  regularmente para valorar el estado cognosci
 de una persona o detectar una posible demencia. Su aplicación requiere alrededor de 
 siete minutos y suele valorarse entre 1 y 30 puntos.</value>
   </data>
+  <metadata name="ttpMensajeMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

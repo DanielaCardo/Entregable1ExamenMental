@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMemoria));
             gbMemoria = new GroupBox();
             lblMemoriaNro = new Label();
@@ -43,6 +44,7 @@
             btnMemoriaCancelar = new Button();
             btnSiguienteMemoria = new Button();
             btnAtrasMemoria = new Button();
+            ttpMensajeMemoria = new ToolTip(components);
             gbMemoria.SuspendLayout();
             gbMemoria2.SuspendLayout();
             SuspendLayout();
@@ -156,6 +158,7 @@
             btnMemoriaGuardar.Size = new Size(83, 35);
             btnMemoriaGuardar.TabIndex = 4;
             btnMemoriaGuardar.Text = "&Guardar";
+            ttpMensajeMemoria.SetToolTip(btnMemoriaGuardar, "Guardar respuesta");
             btnMemoriaGuardar.UseVisualStyleBackColor = false;
             btnMemoriaGuardar.Click += btnMemoriaGuardar_Click;
             // 
@@ -167,6 +170,7 @@
             btnMemoriaCancelar.Size = new Size(83, 35);
             btnMemoriaCancelar.TabIndex = 5;
             btnMemoriaCancelar.Text = "&Cancelar";
+            ttpMensajeMemoria.SetToolTip(btnMemoriaCancelar, "Cancelar formulario ");
             btnMemoriaCancelar.UseVisualStyleBackColor = false;
             btnMemoriaCancelar.Click += btnMemoriaCancelar_Click;
             // 
@@ -179,6 +183,7 @@
             btnSiguienteMemoria.Size = new Size(82, 35);
             btnSiguienteMemoria.TabIndex = 17;
             btnSiguienteMemoria.Text = "Siguiente >";
+            ttpMensajeMemoria.SetToolTip(btnSiguienteMemoria, "Pasar al siguiente formulario");
             btnSiguienteMemoria.UseVisualStyleBackColor = false;
             btnSiguienteMemoria.Click += btnSiguienteMemoria_Click;
             // 
@@ -186,11 +191,12 @@
             // 
             btnAtrasMemoria.BackColor = SystemColors.Window;
             btnAtrasMemoria.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAtrasMemoria.Location = new Point(179, 258);
+            btnAtrasMemoria.Location = new Point(190, 258);
             btnAtrasMemoria.Name = "btnAtrasMemoria";
             btnAtrasMemoria.Size = new Size(85, 35);
             btnAtrasMemoria.TabIndex = 18;
             btnAtrasMemoria.Text = "< Atrás";
+            ttpMensajeMemoria.SetToolTip(btnAtrasMemoria, "Regresar al formulario anterior");
             btnAtrasMemoria.UseVisualStyleBackColor = false;
             btnAtrasMemoria.Click += btnAtrasMemoria_Click;
             // 
@@ -230,5 +236,6 @@
         private Button btnMemoriaCancelar;
         private Button btnSiguienteMemoria;
         private Button btnAtrasMemoria;
+        private ToolTip ttpMensajeMemoria;
     }
 }

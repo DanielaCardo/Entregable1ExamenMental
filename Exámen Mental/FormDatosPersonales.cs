@@ -43,17 +43,17 @@ namespace Exámen_Mental
                     var direccion = txtDireccion.Text.Trim();
 
                     // Cadena de mensaje que contine los datos que el usuario ingresa
-                    string mensaje = $"Primer Nombre {primerNombre} \n" +
-                                    $"Segundo Nombre {segundoNombre} \n" +
-                                    $"Primer Apellido {primerApellido} \n" +
-                                    $"Segundo Apellido {segundoApellido} \n" +
-                                    $"Tipo Documento {tipoDocumento} \n" +
-                                    $"Número de Documento {documento} \n" +
-                                    $"Fecha de Nacimiento {fechaNacimiento}\n" +
-                                    $"Sexo {sexo} \n" +
-                                    $"Departamento {departamento}\n" +
-                                    $"Municipio {municipio}\n" +
-                                    $"Dirección  {direccion}\n";
+                    string mensaje = $"Primer Nombre: {primerNombre} \n" +
+                                    $"Segundo Nombre: {segundoNombre} \n" +
+                                    $"Primer Apellido: {primerApellido} \n" +
+                                    $"Segundo Apellido: {segundoApellido} \n" +
+                                    $"Tipo Documento: {tipoDocumento} \n" +
+                                    $"Número de Documento: {documento} \n" +
+                                    $"Fecha de Nacimiento: {fechaNacimiento}\n" +
+                                    $"Sexo: {sexo} \n" +
+                                    $"Departamento: {departamento}\n" +
+                                    $"Municipio: {municipio}\n" +
+                                    $"Dirección:  {direccion}\n";
 
                     // Muestra el mensaje con todos los datos ingresados 
                     MessageBox.Show(mensaje, this.Text,
@@ -121,7 +121,35 @@ namespace Exámen_Mental
 
             return true;
         }
-      
+
+        private void FormDatosPersonales_Load(object sender, EventArgs e)
+        {
+            // Asignar los eventos KeyPress a los TextBox correspondientes
+            txtPrimerNombre.KeyPress += new KeyPressEventHandler(txtSoloLetras_KeyPress);
+            txtSegundoNombre.KeyPress += new KeyPressEventHandler(txtSoloLetras_KeyPress);
+            txtPrimerApellido.KeyPress += new KeyPressEventHandler(txtSoloLetras_KeyPress);
+            txtSegundoApellido.KeyPress += new KeyPressEventHandler(txtSoloLetras_KeyPress);
+            txtNumeroDocumento.KeyPress += new KeyPressEventHandler(txtSoloNumeros_KeyPress);
+        }
+
+        private void txtSoloLetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Solo permitir letras y la tecla de retroceso (Backspace)
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Solo permitir números y la tecla de retroceso (Backspace)
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -135,3 +163,5 @@ namespace Exámen_Mental
         }
     }
 }
+
+

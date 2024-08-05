@@ -57,8 +57,13 @@
             btnDatosPGuardar = new Button();
             btnCancelar = new Button();
             ttpMensaje = new ToolTip(components);
-            erpError = new ErrorProvider(components);
             btnDatosMenu = new Button();
+            erpError = new ErrorProvider(components);
+            lblAsteriscoPNombre = new Label();
+            lblAsteriscoTDocumento = new Label();
+            lblAsteriscoPApellido = new Label();
+            lblAsteriscoFNacimiento = new Label();
+            lblAsteriscoDocumento = new Label();
             gbSexo.SuspendLayout();
             gbDatosResidencia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)erpError).BeginInit();
@@ -325,10 +330,6 @@
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
-            // erpError
-            // 
-            erpError.ContainerControl = this;
-            // 
             // btnDatosMenu
             // 
             btnDatosMenu.Location = new Point(505, 401);
@@ -340,11 +341,75 @@
             btnDatosMenu.UseVisualStyleBackColor = true;
             btnDatosMenu.Click += btnDatosMenu_Click;
             // 
+            // erpError
+            // 
+            erpError.ContainerControl = this;
+            // 
+            // lblAsteriscoPNombre
+            // 
+            lblAsteriscoPNombre.AutoSize = true;
+            lblAsteriscoPNombre.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAsteriscoPNombre.ForeColor = Color.Crimson;
+            lblAsteriscoPNombre.Location = new Point(32, 38);
+            lblAsteriscoPNombre.Name = "lblAsteriscoPNombre";
+            lblAsteriscoPNombre.Size = new Size(14, 17);
+            lblAsteriscoPNombre.TabIndex = 23;
+            lblAsteriscoPNombre.Text = "*";
+            // 
+            // lblAsteriscoTDocumento
+            // 
+            lblAsteriscoTDocumento.AutoSize = true;
+            lblAsteriscoTDocumento.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAsteriscoTDocumento.ForeColor = Color.Crimson;
+            lblAsteriscoTDocumento.Location = new Point(32, 118);
+            lblAsteriscoTDocumento.Name = "lblAsteriscoTDocumento";
+            lblAsteriscoTDocumento.Size = new Size(14, 17);
+            lblAsteriscoTDocumento.TabIndex = 24;
+            lblAsteriscoTDocumento.Text = "*";
+            // 
+            // lblAsteriscoPApellido
+            // 
+            lblAsteriscoPApellido.AutoSize = true;
+            lblAsteriscoPApellido.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAsteriscoPApellido.ForeColor = Color.Crimson;
+            lblAsteriscoPApellido.Location = new Point(32, 77);
+            lblAsteriscoPApellido.Name = "lblAsteriscoPApellido";
+            lblAsteriscoPApellido.Size = new Size(14, 17);
+            lblAsteriscoPApellido.TabIndex = 25;
+            lblAsteriscoPApellido.Text = "*";
+            // 
+            // lblAsteriscoFNacimiento
+            // 
+            lblAsteriscoFNacimiento.AutoSize = true;
+            lblAsteriscoFNacimiento.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAsteriscoFNacimiento.ForeColor = Color.Crimson;
+            lblAsteriscoFNacimiento.Location = new Point(32, 187);
+            lblAsteriscoFNacimiento.Name = "lblAsteriscoFNacimiento";
+            lblAsteriscoFNacimiento.Size = new Size(14, 17);
+            lblAsteriscoFNacimiento.TabIndex = 26;
+            lblAsteriscoFNacimiento.Text = "*";
+            // 
+            // lblAsteriscoDocumento
+            // 
+            lblAsteriscoDocumento.AutoSize = true;
+            lblAsteriscoDocumento.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAsteriscoDocumento.ForeColor = Color.Crimson;
+            lblAsteriscoDocumento.Location = new Point(360, 126);
+            lblAsteriscoDocumento.Name = "lblAsteriscoDocumento";
+            lblAsteriscoDocumento.Size = new Size(14, 17);
+            lblAsteriscoDocumento.TabIndex = 27;
+            lblAsteriscoDocumento.Text = "*";
+            // 
             // FormDatosPersonales
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(740, 450);
+            Controls.Add(lblAsteriscoDocumento);
+            Controls.Add(lblAsteriscoFNacimiento);
+            Controls.Add(lblAsteriscoPApellido);
+            Controls.Add(lblAsteriscoTDocumento);
+            Controls.Add(lblAsteriscoPNombre);
             Controls.Add(btnDatosMenu);
             Controls.Add(btnCancelar);
             Controls.Add(btnDatosPGuardar);
@@ -367,6 +432,7 @@
             Controls.Add(lblPrimerNombre);
             Name = "FormDatosPersonales";
             Text = "Datos Personales";
+            Load += FormDatosPersonales_Load;
             gbSexo.ResumeLayout(false);
             gbSexo.PerformLayout();
             gbDatosResidencia.ResumeLayout(false);
@@ -408,5 +474,10 @@
         private ToolTip ttpMensaje;
         private ErrorProvider erpError;
         private Button btnDatosMenu;
+        private Label lblAsteriscoPNombre;
+        private Label lblAsteriscoDocumento;
+        private Label lblAsteriscoFNacimiento;
+        private Label lblAsteriscoPApellido;
+        private Label lblAsteriscoTDocumento;
     }
 }

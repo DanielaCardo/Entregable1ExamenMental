@@ -14,9 +14,20 @@ namespace Exámen_Mental
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            var form = new FormMenu();
-            form.Show();
-            Hide();
+            // Verificar que los campos no estén vacíos
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtContraseña.Text))
+            {
+                MessageBox.Show("Se deben ingresar ambos campos: Usuario y Contraseña.", "Campos Obligatorios",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                // Abrir el formulario de menú
+                var form = new FormMenu();
+                form.Show();
+                Hide();
+            }
+
         }
     }
 }

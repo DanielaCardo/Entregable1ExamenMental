@@ -123,4 +123,7 @@ Luego pida a la persona que las repita. Asignandole un punto por cada una.
 Si en un primer intento no logra repetir las palabras, repítalas hasta que la 
 perosna las registre. Anote el número de ensayos repetidos. _____________</value>
   </data>
+  <metadata name="ttpMensajeMemoria.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

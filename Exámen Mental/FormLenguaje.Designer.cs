@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLenguaje));
             gbLenguaje2 = new GroupBox();
             cbo6Lenguaje = new ComboBox();
@@ -69,6 +70,7 @@
             label15 = new Label();
             btnLenguajeVolverMenu = new Button();
             btnAtrasLenguaje = new Button();
+            ttpMensajeLenguaje = new ToolTip(components);
             gbLenguaje2.SuspendLayout();
             gbLenguaje.SuspendLayout();
             gbLenguaje3.SuspendLayout();
@@ -188,6 +190,7 @@
             btnLenguajeCancelar.Size = new Size(87, 33);
             btnLenguajeCancelar.TabIndex = 13;
             btnLenguajeCancelar.Text = "&Cancelar";
+            ttpMensajeLenguaje.SetToolTip(btnLenguajeCancelar, "Cancelar Fomulario");
             btnLenguajeCancelar.UseVisualStyleBackColor = false;
             btnLenguajeCancelar.Click += btnLenguajeCancelar_Click;
             // 
@@ -199,6 +202,7 @@
             btnLengiuajeGuardar.Size = new Size(85, 33);
             btnLengiuajeGuardar.TabIndex = 12;
             btnLengiuajeGuardar.Text = "&Guardar";
+            ttpMensajeLenguaje.SetToolTip(btnLengiuajeGuardar, "Guardar respuestas");
             btnLengiuajeGuardar.UseVisualStyleBackColor = false;
             // 
             // gbLenguaje3
@@ -473,6 +477,7 @@
             btnLenguajeVolverMenu.Size = new Size(71, 33);
             btnLenguajeVolverMenu.TabIndex = 19;
             btnLenguajeVolverMenu.Text = "Menu >>";
+            ttpMensajeLenguaje.SetToolTip(btnLenguajeVolverMenu, "Volver al menu principal");
             btnLenguajeVolverMenu.UseVisualStyleBackColor = false;
             btnLenguajeVolverMenu.Click += btnLenguajeVolverMenu_Click;
             // 
@@ -485,6 +490,7 @@
             btnAtrasLenguaje.Size = new Size(72, 33);
             btnAtrasLenguaje.TabIndex = 20;
             btnAtrasLenguaje.Text = "< Atrás";
+            ttpMensajeLenguaje.SetToolTip(btnAtrasLenguaje, "Regresar al formulario anterior");
             btnAtrasLenguaje.UseVisualStyleBackColor = false;
             btnAtrasLenguaje.Click += btnAtrasLenguaje_Click;
             // 
@@ -492,7 +498,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 671);
+            ClientSize = new Size(800, 651);
             Controls.Add(btnAtrasLenguaje);
             Controls.Add(btnLenguajeVolverMenu);
             Controls.Add(gbLenguaje7);
@@ -567,5 +573,6 @@
         private Button btnResultado;
         private Button btnLenguajeVolverMenu;
         private Button btnAtrasLenguaje;
+        private ToolTip ttpMensajeLenguaje;
     }
 }

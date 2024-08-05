@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             lblExamenMentalAbreviado = new Label();
             lblDescripcionMini = new Label();
             btnIniciarExamen = new Button();
             btnNuevoRegistro = new Button();
             btnMenuSalir = new Button();
+            ttpMensajeMenu = new ToolTip(components);
             SuspendLayout();
             // 
             // lblExamenMentalAbreviado
@@ -67,6 +69,7 @@
             btnIniciarExamen.Size = new Size(320, 87);
             btnIniciarExamen.TabIndex = 11;
             btnIniciarExamen.Text = "Iniciar Exámen";
+            ttpMensajeMenu.SetToolTip(btnIniciarExamen, "Iniciar test mental");
             btnIniciarExamen.UseVisualStyleBackColor = false;
             btnIniciarExamen.Click += btnIniciarExamen_Click;
             // 
@@ -78,6 +81,7 @@
             btnNuevoRegistro.Size = new Size(138, 31);
             btnNuevoRegistro.TabIndex = 12;
             btnNuevoRegistro.Text = "Nuevo Registro";
+            ttpMensajeMenu.SetToolTip(btnNuevoRegistro, "Realizar nuevo registro");
             btnNuevoRegistro.UseVisualStyleBackColor = false;
             btnNuevoRegistro.Click += btnNuevoRegistro_Click;
             // 
@@ -116,5 +120,6 @@
         private Button btnIniciarExamen;
         private Button btnNuevoRegistro;
         private Button btnMenuSalir;
+        private ToolTip ttpMensajeMenu;
     }
 }

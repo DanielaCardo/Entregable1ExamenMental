@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             gbOrientacion = new GroupBox();
             lblOrientaNro = new Label();
             lblOrientaPuntuación = new Label();
@@ -65,6 +66,7 @@
             btnOrientaGuardar = new Button();
             btnOrientaSiguiente = new Button();
             btnOrientaVolverMenu = new Button();
+            ttpMensajeOrientacion = new ToolTip(components);
             gbOrientacion.SuspendLayout();
             gbOrientacion2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -445,6 +447,7 @@
             btnOrientaCancelar.Size = new Size(83, 32);
             btnOrientaCancelar.TabIndex = 14;
             btnOrientaCancelar.Text = "&Cancelar";
+            ttpMensajeOrientacion.SetToolTip(btnOrientaCancelar, "Cancelar formulario");
             btnOrientaCancelar.UseVisualStyleBackColor = false;
             btnOrientaCancelar.Click += btnOrientaCancelar_Click;
             // 
@@ -456,6 +459,7 @@
             btnOrientaGuardar.Size = new Size(83, 32);
             btnOrientaGuardar.TabIndex = 15;
             btnOrientaGuardar.Text = "&Guardar";
+            ttpMensajeOrientacion.SetToolTip(btnOrientaGuardar, "Guardar respuestas");
             btnOrientaGuardar.UseVisualStyleBackColor = false;
             btnOrientaGuardar.Click += btnOrientaGuardar_Click;
             // 
@@ -463,22 +467,24 @@
             // 
             btnOrientaSiguiente.BackColor = SystemColors.Window;
             btnOrientaSiguiente.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnOrientaSiguiente.Location = new Point(494, 437);
+            btnOrientaSiguiente.Location = new Point(482, 446);
             btnOrientaSiguiente.Name = "btnOrientaSiguiente";
-            btnOrientaSiguiente.Size = new Size(90, 44);
+            btnOrientaSiguiente.Size = new Size(90, 35);
             btnOrientaSiguiente.TabIndex = 16;
             btnOrientaSiguiente.Text = "Siguiente >";
+            ttpMensajeOrientacion.SetToolTip(btnOrientaSiguiente, "Pasar al siguiente formulario");
             btnOrientaSiguiente.UseVisualStyleBackColor = false;
             btnOrientaSiguiente.Click += btnOrientaSiguiente_Click_1;
             // 
             // btnOrientaVolverMenu
             // 
             btnOrientaVolverMenu.BackColor = SystemColors.Window;
-            btnOrientaVolverMenu.Location = new Point(138, 443);
+            btnOrientaVolverMenu.Location = new Point(151, 446);
             btnOrientaVolverMenu.Name = "btnOrientaVolverMenu";
-            btnOrientaVolverMenu.Size = new Size(86, 38);
+            btnOrientaVolverMenu.Size = new Size(86, 35);
             btnOrientaVolverMenu.TabIndex = 20;
             btnOrientaVolverMenu.Text = "<< Menu ";
+            ttpMensajeOrientacion.SetToolTip(btnOrientaVolverMenu, "Regresar a menu principal");
             btnOrientaVolverMenu.UseVisualStyleBackColor = false;
             btnOrientaVolverMenu.Click += btnOrientaVolverMenu_Click;
             // 
@@ -544,5 +550,6 @@
         private Button btnOrientaGuardar;
         private Button btnOrientaSiguiente;
         private Button btnOrientaVolverMenu;
+        private ToolTip ttpMensajeOrientacion;
     }
 }
