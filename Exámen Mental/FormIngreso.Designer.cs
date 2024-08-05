@@ -47,7 +47,7 @@
             // 
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblUsuario.Location = new Point(423, 112);
+            lblUsuario.Location = new Point(422, 116);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(59, 20);
             lblUsuario.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             lblContraseña.AutoSize = true;
             lblContraseña.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblContraseña.Location = new Point(423, 168);
+            lblContraseña.Location = new Point(422, 172);
             lblContraseña.Name = "lblContraseña";
             lblContraseña.Size = new Size(83, 20);
             lblContraseña.TabIndex = 2;
@@ -66,7 +66,7 @@
             // txtUsuario
             // 
             txtUsuario.BackColor = SystemColors.ButtonHighlight;
-            txtUsuario.Location = new Point(512, 112);
+            txtUsuario.Location = new Point(511, 116);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(153, 23);
             txtUsuario.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             // txtContraseña
             // 
-            txtContraseña.Location = new Point(512, 168);
+            txtContraseña.Location = new Point(511, 172);
             txtContraseña.Name = "txtContraseña";
             txtContraseña.PasswordChar = '*';
             txtContraseña.Size = new Size(153, 23);
@@ -84,7 +84,7 @@
             // btnCancelar
             // 
             btnCancelar.BackColor = Color.Gainsboro;
-            btnCancelar.Location = new Point(436, 227);
+            btnCancelar.Location = new Point(442, 235);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(85, 36);
             btnCancelar.TabIndex = 4;
@@ -96,7 +96,7 @@
             // btnIngresar
             // 
             btnIngresar.BackColor = Color.FromArgb(255, 224, 192);
-            btnIngresar.Location = new Point(556, 227);
+            btnIngresar.Location = new Point(564, 235);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.Size = new Size(82, 36);
             btnIngresar.TabIndex = 5;
@@ -107,7 +107,7 @@
             // picIngreso
             // 
             picIngreso.Image = (Image)resources.GetObject("picIngreso.Image");
-            picIngreso.Location = new Point(141, 60);
+            picIngreso.Location = new Point(132, 87);
             picIngreso.Name = "picIngreso";
             picIngreso.Size = new Size(242, 212);
             picIngreso.TabIndex = 6;
@@ -118,7 +118,7 @@
             lblAsteriscoFNacimiento.AutoSize = true;
             lblAsteriscoFNacimiento.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblAsteriscoFNacimiento.ForeColor = Color.Crimson;
-            lblAsteriscoFNacimiento.Location = new Point(403, 112);
+            lblAsteriscoFNacimiento.Location = new Point(402, 116);
             lblAsteriscoFNacimiento.Name = "lblAsteriscoFNacimiento";
             lblAsteriscoFNacimiento.Size = new Size(14, 17);
             lblAsteriscoFNacimiento.TabIndex = 27;
@@ -129,7 +129,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Crimson;
-            label1.Location = new Point(403, 168);
+            label1.Location = new Point(402, 172);
             label1.Name = "label1";
             label1.Size = new Size(14, 17);
             label1.TabIndex = 28;
@@ -141,7 +141,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnCancelar;
-            ClientSize = new Size(800, 373);
+            ClientSize = new Size(800, 404);
             Controls.Add(label1);
             Controls.Add(lblAsteriscoFNacimiento);
             Controls.Add(picIngreso);
@@ -152,6 +152,7 @@
             Controls.Add(lblContraseña);
             Controls.Add(lblUsuario);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "FormIngreso";
             StartPosition = FormStartPosition.CenterScreen;

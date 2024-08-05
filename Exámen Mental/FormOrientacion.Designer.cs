@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrientacion));
             gbOrientacion = new GroupBox();
             lblOrientaNro = new Label();
             lblOrientaPuntuación = new Label();
@@ -500,6 +501,7 @@
             Controls.Add(groupBox1);
             Controls.Add(gbOrientacion2);
             Controls.Add(gbOrientacion);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormOrientacion";
             Text = "Orientación";
             gbOrientacion.ResumeLayout(false);

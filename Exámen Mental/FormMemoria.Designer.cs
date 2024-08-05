@@ -211,6 +211,7 @@
             Controls.Add(btnMemoriaGuardar);
             Controls.Add(gbMemoria2);
             Controls.Add(gbMemoria);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormMemoria";
             Text = "Memoria";
             gbMemoria.ResumeLayout(false);

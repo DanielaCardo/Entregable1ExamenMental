@@ -510,6 +510,7 @@
             Controls.Add(gbLenguaje);
             Controls.Add(btnLenguajeCancelar);
             Controls.Add(btnLengiuajeGuardar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormLenguaje";
             Text = "Lenguaje";
             gbLenguaje2.ResumeLayout(false);

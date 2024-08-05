@@ -75,12 +75,14 @@
             // 
             // btnNuevoRegistro
             // 
-            btnNuevoRegistro.BackColor = SystemColors.ScrollBar;
-            btnNuevoRegistro.Location = new Point(21, 12);
+            btnNuevoRegistro.BackColor = SystemColors.GradientInactiveCaption;
+            btnNuevoRegistro.Image = (Image)resources.GetObject("btnNuevoRegistro.Image");
+            btnNuevoRegistro.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNuevoRegistro.Location = new Point(22, 12);
             btnNuevoRegistro.Name = "btnNuevoRegistro";
-            btnNuevoRegistro.Size = new Size(138, 31);
+            btnNuevoRegistro.Size = new Size(131, 36);
             btnNuevoRegistro.TabIndex = 12;
-            btnNuevoRegistro.Text = "Nuevo Registro";
+            btnNuevoRegistro.Text = "        Nuevo Registro";
             ttpMensajeMenu.SetToolTip(btnNuevoRegistro, "Realizar nuevo registro");
             btnNuevoRegistro.UseVisualStyleBackColor = false;
             btnNuevoRegistro.Click += btnNuevoRegistro_Click;
@@ -107,6 +109,7 @@
             Controls.Add(btnIniciarExamen);
             Controls.Add(lblDescripcionMini);
             Controls.Add(lblExamenMentalAbreviado);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormMenu";
             Text = "Menu Examen Mental";
             ResumeLayout(false);

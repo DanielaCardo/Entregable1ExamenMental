@@ -325,6 +325,7 @@
             Controls.Add(btnAtencionCEGuardar);
             Controls.Add(gbAtencionC2);
             Controls.Add(gbAtencionC);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormAtencionEvocacion";
             Text = "Atención-Cálculo y Evocación";
             gbAtencionC2.ResumeLayout(false);
