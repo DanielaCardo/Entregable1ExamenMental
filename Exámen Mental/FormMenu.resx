@@ -130,24 +130,18 @@ siete minutos y suele valorarse entre 1 y 30 puntos.</value>
   <metadata name="ttpMensajeMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="ttpMensajeMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnNuevoRegistro.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALAAAACwARRqq2kAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAAA5klEQVRIS82RMQ4BURCGV4hWJ1HonIJDOAy1Fq3eCZxCreQEEmpxgOUfdpJ5mzdvniGxX/LFmvwz
-        f9iiRheu4RU+MqTcBvZgFisYO2R5hH1ocoG0MH59S8PHT9VnVgkv5cBZOkrHuST5d3kKCCrhX0LvRMVT
-        UJdevAqHcpBHpSVU4ZAXc/8vBTzTlMRmAaklTUlsFmAGDJpZwDNNSWwWkFrSlMRmAWbA4GcFLTh4Pwa4
-        CoZwB29wDydwCil3gBJXwRbyvO4cSniuEgt04AyO4AKe4R0uYRtKXAWf0JyCb1WJhT1WFMUTrLvPKk0t
-        ko0AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        rwAAAK8BK7AVuQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADmSURBVEhLzZEx
+        DgFREIZXiFYnUeicgkM4DLUWrd4JnEKt5AQSanGA5R92knmbN2+eIbFf8sWa/DN/2KJGF67hFT4ypNwG
+        9mAWKxg7ZHmEfWhygbQwfn1Lw8dP1WdWCS/lwFk6Sse5JPl3eQoIKuFfQu9ExVNQl168CodykEelJVTh
+        kBdz/y8FPNOUxGYBqSVNSWwWYAYMmlnAM01JbBaQWtKUxGYBZsDgZwUtOHg/BrgKhnAHb3APJ3AKKXeA
+        ElfBFvK87hxKeK4SC3TgDI7gAp7hHS5hG0pcBZ/QnIJvVYmFPVYUxROsu88qTS2SjQAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
-  <metadata name="ttpMensajeMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

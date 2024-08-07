@@ -7,27 +7,43 @@ namespace Exámen_Mental
             InitializeComponent();
         }
 
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        // Usuario y contraseña predeterminados
+        private readonly string defaultUsername = "daniela.cardonap1";
+        private readonly string defaultPassword = "1037625706";
+
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            // Verificar que los campos no estén vacíos
-            if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtContraseña.Text))
+            // Validar que los campos no estén vacíos
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
             {
-                MessageBox.Show("Se deben ingresar ambos campos: Usuario y Contraseña.", "Campos Obligatorios",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo Usuario es obligatorio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtContraseña.Text))
+            {
+                MessageBox.Show("El campo Contraseña es obligatorio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar las credenciales ingresadas 
+            if (txtUsuario.Text == defaultUsername && txtContraseña.Text == defaultPassword)
+            {
+                MessageBox.Show("Ingreso exitoso", "Bienvenido a Examen Mental ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // abrir el formulario de menú
+                FormMenu formMenu = new FormMenu();
+                formMenu.Show();
+                this.Hide();
             }
             else
             {
-                // Abrir el formulario de menú
-                var form = new FormMenu();
-                form.Show();
-                Hide();
+                MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+        }
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

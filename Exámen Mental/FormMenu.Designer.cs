@@ -109,6 +109,7 @@
             Controls.Add(btnIniciarExamen);
             Controls.Add(lblDescripcionMini);
             Controls.Add(lblExamenMentalAbreviado);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormMenu";
             Text = "Menu Examen Mental";
