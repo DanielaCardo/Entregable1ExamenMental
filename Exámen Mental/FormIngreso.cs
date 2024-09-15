@@ -9,7 +9,7 @@ namespace Exámen_Mental
 
         // Usuario y contraseña predeterminados
         private readonly string defaultUsername = "daniela.cardonap1";
-        private readonly string defaultPassword = "1037625706";
+        private readonly string defaultPassword = "123";
 
 
         private void btnIngresar_Click(object sender, EventArgs e)

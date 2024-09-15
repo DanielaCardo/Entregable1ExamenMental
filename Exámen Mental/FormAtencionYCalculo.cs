@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,20 @@ namespace Exámen_Mental
 {
     public partial class FormAtencionEvocacion : System.Windows.Forms.Form
     {
+        public static TestMiniMental TestMiniMental = new TestMiniMental();
         public FormAtencionEvocacion()
         {
             InitializeComponent();
+            TestMiniMental.PuntajesPregunta = new List<PuntajePregunta>();
         }
 
         private void btnAtencionCEGuardar_Click(object sender, EventArgs e)
         {
+            var punto12 = cbo4Puntuacion.SelectedItem as string;
+            var punto13 = cbo5Puntuacion.SelectedItem as string;
+
+            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 12, Puntaje = int.Parse(cbo4Puntuacion.SelectedItem as string) });
+            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 13, Puntaje = int.Parse(cbo5Puntuacion.SelectedItem as string) });
             var form = new FormLenguaje();
             form.Show();
             Hide();

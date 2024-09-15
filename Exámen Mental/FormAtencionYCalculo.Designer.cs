@@ -102,6 +102,7 @@
             // 
             cbo4Puntuacion.AutoCompleteCustomSource.AddRange(new string[] { "1", "2", "3", "4", "5" });
             cbo4Puntuacion.FormattingEnabled = true;
+            cbo4Puntuacion.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5" });
             cbo4Puntuacion.Location = new Point(613, 38);
             cbo4Puntuacion.Name = "cbo4Puntuacion";
             cbo4Puntuacion.Size = new Size(94, 23);
@@ -252,7 +253,7 @@
             // 
             cbo5Puntuacion.AutoCompleteCustomSource.AddRange(new string[] { "1", "2", "3", "4", "5" });
             cbo5Puntuacion.FormattingEnabled = true;
-            cbo5Puntuacion.Items.AddRange(new object[] { "1", "2", "3" });
+            cbo5Puntuacion.Items.AddRange(new object[] { "0", "1", "2", "3" });
             cbo5Puntuacion.Location = new Point(613, 16);
             cbo5Puntuacion.Name = "cbo5Puntuacion";
             cbo5Puntuacion.Size = new Size(94, 23);

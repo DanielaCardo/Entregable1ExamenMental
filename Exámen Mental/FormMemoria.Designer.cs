@@ -116,6 +116,7 @@
             // 
             cbo3Puntuacion.AutoCompleteCustomSource.AddRange(new string[] { "1", "2", "3" });
             cbo3Puntuacion.FormattingEnabled = true;
+            cbo3Puntuacion.Items.AddRange(new object[] { "0", "1", "2", "3" });
             cbo3Puntuacion.Location = new Point(613, 39);
             cbo3Puntuacion.Name = "cbo3Puntuacion";
             cbo3Puntuacion.Size = new Size(94, 23);

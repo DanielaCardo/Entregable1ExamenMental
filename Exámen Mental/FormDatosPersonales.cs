@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,14 +33,20 @@ namespace Exámen_Mental
                     var primerApellido = txtPrimerApellido.Text.Trim();
                     var segundoNombre = txtSegundoNombre.Text.Trim();
                     var segundoApellido = txtSegundoApellido.Text.Trim();
-                    var tipoDocumento = cboTipoDocumento.Text.Trim();
+                    var tipoDocumento = cboTipoDocumento.SelectedItem as TipoDocumento;
                     var documento = txtNumeroDocumento.Text.Trim();
                     var fechaNacimiento = dtpFechaNacimiento.Value;
                     DateTime fechaActual = DateTime.Today;
-                    var sexo = rdbFemenino.Checked ? "Femenino" :
-                               rdbMasculino.Checked ? "Masculino" : "No definido";
-                    var departamento = cboDepartamento.Text.Trim();
-                    var municipio = cboMunicipio.Text.Trim();
+                    var sexo = rdbMasculino.Checked ?
+                    new Sexo() { Id = (int)Entidades.Enumeraciones.Sexo.Masculino, 
+                        Nombre = "Masculino" } :
+                    new Sexo()
+                    {
+                        Id = (int)Entidades.Enumeraciones.Sexo.Femenino,
+                        Nombre = "Femenino"
+                    };
+                    var departamento = cboDepartamento.SelectedItem as Departamento;
+                    var municipio = cboMunicipio.SelectedItem as Municipio;
                     var direccion = txtDireccion.Text.Trim();
 
                     // Cadena de mensaje que contine los datos que el usuario ingresa

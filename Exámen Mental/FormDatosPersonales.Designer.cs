@@ -280,7 +280,7 @@
             // cboMunicipio
             // 
             cboMunicipio.FormattingEnabled = true;
-            cboMunicipio.Items.AddRange(new object[] { "Medellin", "Barbosa", "Sumapaz", "Funza", "Barranquilla", "Soledad" });
+            cboMunicipio.Items.AddRange(new object[] { "Barranquilla", "Medellín", "Manizales" });
             cboMunicipio.Location = new Point(438, 32);
             cboMunicipio.Name = "cboMunicipio";
             cboMunicipio.Size = new Size(176, 23);
@@ -299,7 +299,7 @@
             // cboDepartamento
             // 
             cboDepartamento.FormattingEnabled = true;
-            cboDepartamento.Items.AddRange(new object[] { "Antioquia", "Atlántico", "Bogotá" });
+            cboDepartamento.Items.AddRange(new object[] { "Antioquia", "Atlántico", "Caldas" });
             cboDepartamento.Location = new Point(146, 32);
             cboDepartamento.Name = "cboDepartamento";
             cboDepartamento.Size = new Size(169, 23);

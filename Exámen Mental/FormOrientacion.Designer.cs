@@ -68,9 +68,13 @@
             btnOrientaSiguiente = new Button();
             btnOrientaVolverMenu = new Button();
             ttpMensajeOrientacion = new ToolTip(components);
+            lblDocumentoOrientacion = new Label();
+            txtNumeroDocumento = new TextBox();
+            erpError = new ErrorProvider(components);
             gbOrientacion.SuspendLayout();
             gbOrientacion2.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)erpError).BeginInit();
             SuspendLayout();
             // 
             // gbOrientacion
@@ -81,7 +85,7 @@
             gbOrientacion.Controls.Add(lblOrientacion);
             gbOrientacion.Controls.Add(lblOrientaPuntajeAcum);
             gbOrientacion.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            gbOrientacion.Location = new Point(40, 28);
+            gbOrientacion.Location = new Point(81, 76);
             gbOrientacion.Name = "gbOrientacion";
             gbOrientacion.Size = new Size(713, 61);
             gbOrientacion.TabIndex = 0;
@@ -140,7 +144,7 @@
             gbOrientacion2.Controls.Add(lbl1);
             gbOrientacion2.Controls.Add(lbl1Hasta5);
             gbOrientacion2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            gbOrientacion2.Location = new Point(40, 95);
+            gbOrientacion2.Location = new Point(81, 143);
             gbOrientacion2.Name = "gbOrientacion2";
             gbOrientacion2.Size = new Size(713, 153);
             gbOrientacion2.TabIndex = 1;
@@ -299,7 +303,7 @@
             groupBox1.Controls.Add(lbl2);
             groupBox1.Controls.Add(lbl2Hasta5);
             groupBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(40, 254);
+            groupBox1.Location = new Point(81, 302);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(713, 153);
             groupBox1.TabIndex = 13;
@@ -443,7 +447,7 @@
             // btnOrientaCancelar
             // 
             btnOrientaCancelar.BackColor = SystemColors.ControlLight;
-            btnOrientaCancelar.Location = new Point(262, 430);
+            btnOrientaCancelar.Location = new Point(317, 481);
             btnOrientaCancelar.Name = "btnOrientaCancelar";
             btnOrientaCancelar.Size = new Size(83, 32);
             btnOrientaCancelar.TabIndex = 14;
@@ -455,20 +459,20 @@
             // btnOrientaGuardar
             // 
             btnOrientaGuardar.BackColor = Color.FromArgb(255, 224, 192);
-            btnOrientaGuardar.Location = new Point(368, 430);
+            btnOrientaGuardar.Location = new Point(423, 481);
             btnOrientaGuardar.Name = "btnOrientaGuardar";
             btnOrientaGuardar.Size = new Size(83, 32);
             btnOrientaGuardar.TabIndex = 15;
             btnOrientaGuardar.Text = "&Guardar";
             ttpMensajeOrientacion.SetToolTip(btnOrientaGuardar, "Guardar respuestas");
             btnOrientaGuardar.UseVisualStyleBackColor = false;
-            btnOrientaGuardar.Click += btnOrientaGuardar_Click;
+            
             // 
             // btnOrientaSiguiente
             // 
             btnOrientaSiguiente.BackColor = SystemColors.Window;
             btnOrientaSiguiente.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnOrientaSiguiente.Location = new Point(482, 446);
+            btnOrientaSiguiente.Location = new Point(537, 497);
             btnOrientaSiguiente.Name = "btnOrientaSiguiente";
             btnOrientaSiguiente.Size = new Size(90, 35);
             btnOrientaSiguiente.TabIndex = 16;
@@ -480,7 +484,7 @@
             // btnOrientaVolverMenu
             // 
             btnOrientaVolverMenu.BackColor = SystemColors.Window;
-            btnOrientaVolverMenu.Location = new Point(151, 446);
+            btnOrientaVolverMenu.Location = new Point(208, 497);
             btnOrientaVolverMenu.Name = "btnOrientaVolverMenu";
             btnOrientaVolverMenu.Size = new Size(86, 35);
             btnOrientaVolverMenu.TabIndex = 20;
@@ -489,11 +493,33 @@
             btnOrientaVolverMenu.UseVisualStyleBackColor = false;
             btnOrientaVolverMenu.Click += btnOrientaVolverMenu_Click;
             // 
+            // lblDocumentoOrientacion
+            // 
+            lblDocumentoOrientacion.AutoSize = true;
+            lblDocumentoOrientacion.Location = new Point(81, 39);
+            lblDocumentoOrientacion.Name = "lblDocumentoOrientacion";
+            lblDocumentoOrientacion.Size = new Size(87, 15);
+            lblDocumentoOrientacion.TabIndex = 21;
+            lblDocumentoOrientacion.Text = "N° Documento";
+            // 
+            // txtNumeroDocumento
+            // 
+            txtNumeroDocumento.Location = new Point(174, 36);
+            txtNumeroDocumento.Name = "txtNumeroDocumento";
+            txtNumeroDocumento.Size = new Size(222, 23);
+            txtNumeroDocumento.TabIndex = 22;
+            // 
+            // erpError
+            // 
+            erpError.ContainerControl = this;
+            // 
             // FormOrientacion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 493);
+            ClientSize = new Size(877, 562);
+            Controls.Add(txtNumeroDocumento);
+            Controls.Add(lblDocumentoOrientacion);
             Controls.Add(btnOrientaVolverMenu);
             Controls.Add(btnOrientaSiguiente);
             Controls.Add(btnOrientaGuardar);
@@ -510,7 +536,9 @@
             gbOrientacion2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)erpError).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -553,5 +581,8 @@
         private Button btnOrientaSiguiente;
         private Button btnOrientaVolverMenu;
         private ToolTip ttpMensajeOrientacion;
+        private Label lblDocumentoOrientacion;
+        private TextBox txtNumeroDocumento;
+        private ErrorProvider erpError;
     }
 }

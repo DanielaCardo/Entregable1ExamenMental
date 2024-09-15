@@ -41,7 +41,7 @@
             lblLenguaje = new Label();
             lblLenguajePAcum = new Label();
             btnLenguajeCancelar = new Button();
-            btnLengiuajeGuardar = new Button();
+            btnLengiuaGuardar = new Button();
             gbLenguaje3 = new GroupBox();
             cbo7Lenguaje = new ComboBox();
             lblTexto2Lenguaje = new Label();
@@ -71,6 +71,7 @@
             btnLenguajeVolverMenu = new Button();
             btnAtrasLenguaje = new Button();
             ttpMensajeLenguaje = new ToolTip(components);
+            btnVerResultado = new Button();
             gbLenguaje2.SuspendLayout();
             gbLenguaje.SuspendLayout();
             gbLenguaje3.SuspendLayout();
@@ -98,7 +99,7 @@
             // 
             cbo6Lenguaje.AutoCompleteCustomSource.AddRange(new string[] { "1", "2", "3", "4", "5" });
             cbo6Lenguaje.FormattingEnabled = true;
-            cbo6Lenguaje.Items.AddRange(new object[] { "1", "2" });
+            cbo6Lenguaje.Items.AddRange(new object[] { "0", "1", "2" });
             cbo6Lenguaje.Location = new Point(613, 17);
             cbo6Lenguaje.Name = "cbo6Lenguaje";
             cbo6Lenguaje.Size = new Size(94, 23);
@@ -185,7 +186,7 @@
             // btnLenguajeCancelar
             // 
             btnLenguajeCancelar.BackColor = SystemColors.ControlLight;
-            btnLenguajeCancelar.Location = new Point(329, 563);
+            btnLenguajeCancelar.Location = new Point(296, 552);
             btnLenguajeCancelar.Name = "btnLenguajeCancelar";
             btnLenguajeCancelar.Size = new Size(87, 33);
             btnLenguajeCancelar.TabIndex = 13;
@@ -194,16 +195,17 @@
             btnLenguajeCancelar.UseVisualStyleBackColor = false;
             btnLenguajeCancelar.Click += btnLenguajeCancelar_Click;
             // 
-            // btnLengiuajeGuardar
+            // btnLengiuaGuardar
             // 
-            btnLengiuajeGuardar.BackColor = Color.FromArgb(255, 224, 192);
-            btnLengiuajeGuardar.Location = new Point(434, 563);
-            btnLengiuajeGuardar.Name = "btnLengiuajeGuardar";
-            btnLengiuajeGuardar.Size = new Size(85, 33);
-            btnLengiuajeGuardar.TabIndex = 12;
-            btnLengiuajeGuardar.Text = "&Guardar";
-            ttpMensajeLenguaje.SetToolTip(btnLengiuajeGuardar, "Guardar respuestas");
-            btnLengiuajeGuardar.UseVisualStyleBackColor = false;
+            btnLengiuaGuardar.BackColor = Color.FromArgb(255, 224, 192);
+            btnLengiuaGuardar.Location = new Point(416, 552);
+            btnLengiuaGuardar.Name = "btnLengiuaGuardar";
+            btnLengiuaGuardar.Size = new Size(85, 33);
+            btnLengiuaGuardar.TabIndex = 12;
+            btnLengiuaGuardar.Text = "&Guardar";
+            ttpMensajeLenguaje.SetToolTip(btnLengiuaGuardar, "Guardar respuestas");
+            btnLengiuaGuardar.UseVisualStyleBackColor = false;
+            btnLengiuaGuardar.Click += btnLengiuajeGuardar_Click;
             // 
             // gbLenguaje3
             // 
@@ -222,7 +224,7 @@
             // 
             cbo7Lenguaje.AutoCompleteCustomSource.AddRange(new string[] { "1", "2", "3", "4", "5" });
             cbo7Lenguaje.FormattingEnabled = true;
-            cbo7Lenguaje.Items.AddRange(new object[] { "1" });
+            cbo7Lenguaje.Items.AddRange(new object[] { "0", "1" });
             cbo7Lenguaje.Location = new Point(613, 11);
             cbo7Lenguaje.Name = "cbo7Lenguaje";
             cbo7Lenguaje.Size = new Size(94, 23);
@@ -273,7 +275,7 @@
             // 
             cbo8Lenguaje.AutoCompleteCustomSource.AddRange(new string[] { "1", "2", "3", "4", "5" });
             cbo8Lenguaje.FormattingEnabled = true;
-            cbo8Lenguaje.Items.AddRange(new object[] { "1", "2", "3" });
+            cbo8Lenguaje.Items.AddRange(new object[] { "0", "1", "2", "3" });
             cbo8Lenguaje.Location = new Point(613, 34);
             cbo8Lenguaje.Name = "cbo8Lenguaje";
             cbo8Lenguaje.Size = new Size(94, 23);
@@ -324,7 +326,7 @@
             // 
             cbo9Lenguaje.AutoCompleteCustomSource.AddRange(new string[] { "1", "2", "3", "4", "5" });
             cbo9Lenguaje.FormattingEnabled = true;
-            cbo9Lenguaje.Items.AddRange(new object[] { "1", "2", "3" });
+            cbo9Lenguaje.Items.AddRange(new object[] { "0", "1", "2", "3" });
             cbo9Lenguaje.Location = new Point(613, 16);
             cbo9Lenguaje.Name = "cbo9Lenguaje";
             cbo9Lenguaje.Size = new Size(94, 23);
@@ -375,7 +377,7 @@
             // 
             cbo10Lenguaje.AutoCompleteCustomSource.AddRange(new string[] { "1", "2", "3", "4", "5" });
             cbo10Lenguaje.FormattingEnabled = true;
-            cbo10Lenguaje.Items.AddRange(new object[] { "1" });
+            cbo10Lenguaje.Items.AddRange(new object[] { "0", "1" });
             cbo10Lenguaje.Location = new Point(613, 11);
             cbo10Lenguaje.Name = "cbo10Lenguaje";
             cbo10Lenguaje.Size = new Size(94, 23);
@@ -436,7 +438,7 @@
             // 
             cbo11Lenguaje.AutoCompleteCustomSource.AddRange(new string[] { "1", "2", "3", "4", "5" });
             cbo11Lenguaje.FormattingEnabled = true;
-            cbo11Lenguaje.Items.AddRange(new object[] { "1" });
+            cbo11Lenguaje.Items.AddRange(new object[] { "0", "1" });
             cbo11Lenguaje.Location = new Point(613, 65);
             cbo11Lenguaje.Name = "cbo11Lenguaje";
             cbo11Lenguaje.Size = new Size(94, 23);
@@ -485,7 +487,7 @@
             // 
             btnAtrasLenguaje.BackColor = SystemColors.Window;
             btnAtrasLenguaje.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAtrasLenguaje.Location = new Point(238, 588);
+            btnAtrasLenguaje.Location = new Point(193, 588);
             btnAtrasLenguaje.Name = "btnAtrasLenguaje";
             btnAtrasLenguaje.Size = new Size(72, 33);
             btnAtrasLenguaje.TabIndex = 20;
@@ -494,11 +496,23 @@
             btnAtrasLenguaje.UseVisualStyleBackColor = false;
             btnAtrasLenguaje.Click += btnAtrasLenguaje_Click;
             // 
+            // btnVerResultado
+            // 
+            btnVerResultado.BackColor = SystemColors.GradientActiveCaption;
+            btnVerResultado.Location = new Point(339, 604);
+            btnVerResultado.Name = "btnVerResultado";
+            btnVerResultado.Size = new Size(114, 35);
+            btnVerResultado.TabIndex = 21;
+            btnVerResultado.Text = "Resultados";
+            btnVerResultado.UseVisualStyleBackColor = false;
+            btnVerResultado.Click += btnVerResultado_Click;
+            // 
             // FormLenguaje
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 651);
+            Controls.Add(btnVerResultado);
             Controls.Add(btnAtrasLenguaje);
             Controls.Add(btnLenguajeVolverMenu);
             Controls.Add(gbLenguaje7);
@@ -509,7 +523,7 @@
             Controls.Add(gbLenguaje2);
             Controls.Add(gbLenguaje);
             Controls.Add(btnLenguajeCancelar);
-            Controls.Add(btnLengiuajeGuardar);
+            Controls.Add(btnLengiuaGuardar);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormLenguaje";
             Text = "Lenguaje";
@@ -544,7 +558,7 @@
         private Label lblLenguaje;
         private Label lblLenguajePAcum;
         private Button btnLenguajeCancelar;
-        private Button btnLengiuajeGuardar;
+        private Button btnLengiuaGuardar;
         private GroupBox gbLenguaje3;
         private ComboBox cbo7Lenguaje;
         private Label lblTexto2Lenguaje;
@@ -575,5 +589,6 @@
         private Button btnLenguajeVolverMenu;
         private Button btnAtrasLenguaje;
         private ToolTip ttpMensajeLenguaje;
+        private Button btnVerResultado;
     }
 }
