@@ -64,7 +64,6 @@
             lbl2 = new Label();
             lbl2Hasta5 = new Label();
             btnOrientaCancelar = new Button();
-            btnOrientaGuardar = new Button();
             btnOrientaSiguiente = new Button();
             btnOrientaVolverMenu = new Button();
             ttpMensajeOrientacion = new ToolTip(components);
@@ -447,26 +446,13 @@
             // btnOrientaCancelar
             // 
             btnOrientaCancelar.BackColor = SystemColors.ControlLight;
-            btnOrientaCancelar.Location = new Point(317, 481);
+            btnOrientaCancelar.Location = new Point(353, 497);
             btnOrientaCancelar.Name = "btnOrientaCancelar";
             btnOrientaCancelar.Size = new Size(83, 32);
             btnOrientaCancelar.TabIndex = 14;
             btnOrientaCancelar.Text = "&Cancelar";
             ttpMensajeOrientacion.SetToolTip(btnOrientaCancelar, "Cancelar formulario");
             btnOrientaCancelar.UseVisualStyleBackColor = false;
-            btnOrientaCancelar.Click += btnOrientaCancelar_Click;
-            // 
-            // btnOrientaGuardar
-            // 
-            btnOrientaGuardar.BackColor = Color.FromArgb(255, 224, 192);
-            btnOrientaGuardar.Location = new Point(423, 481);
-            btnOrientaGuardar.Name = "btnOrientaGuardar";
-            btnOrientaGuardar.Size = new Size(83, 32);
-            btnOrientaGuardar.TabIndex = 15;
-            btnOrientaGuardar.Text = "&Guardar";
-            ttpMensajeOrientacion.SetToolTip(btnOrientaGuardar, "Guardar respuestas");
-            btnOrientaGuardar.UseVisualStyleBackColor = false;
-            
             // 
             // btnOrientaSiguiente
             // 
@@ -484,7 +470,7 @@
             // btnOrientaVolverMenu
             // 
             btnOrientaVolverMenu.BackColor = SystemColors.Window;
-            btnOrientaVolverMenu.Location = new Point(208, 497);
+            btnOrientaVolverMenu.Location = new Point(248, 497);
             btnOrientaVolverMenu.Name = "btnOrientaVolverMenu";
             btnOrientaVolverMenu.Size = new Size(86, 35);
             btnOrientaVolverMenu.TabIndex = 20;
@@ -522,7 +508,6 @@
             Controls.Add(lblDocumentoOrientacion);
             Controls.Add(btnOrientaVolverMenu);
             Controls.Add(btnOrientaSiguiente);
-            Controls.Add(btnOrientaGuardar);
             Controls.Add(btnOrientaCancelar);
             Controls.Add(groupBox1);
             Controls.Add(gbOrientacion2);
@@ -577,7 +562,6 @@
         private Label lbl2Hasta5;
         private ComboBox cbo2Punt1;
         private Button btnOrientaCancelar;
-        private Button btnOrientaGuardar;
         private Button btnOrientaSiguiente;
         private Button btnOrientaVolverMenu;
         private ToolTip ttpMensajeOrientacion;

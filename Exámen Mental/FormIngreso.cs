@@ -1,16 +1,14 @@
+using Negocio;
+
 namespace Exámen_Mental
 {
     public partial class FormIngreso : System.Windows.Forms.Form
     {
+        IServicioSeguridad servicioSeguridad = new ServicioSeguridad();
         public FormIngreso()
         {
             InitializeComponent();
         }
-
-        // Usuario y contraseña predeterminados
-        private readonly string defaultUsername = "daniela.cardonap1";
-        private readonly string defaultPassword = "123";
-
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -28,10 +26,11 @@ namespace Exámen_Mental
             }
 
             // Validar las credenciales ingresadas 
-            if (txtUsuario.Text == defaultUsername && txtContraseña.Text == defaultPassword)
+            if (servicioSeguridad.ValidarUsuario(new Entidades.Usuario { Clave = txtContraseña.Text,NombreUsuario =txtUsuario.Text }))
             {
                 MessageBox.Show("Ingreso exitoso", "Bienvenido a Examen Mental ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // abrir el formulario de menú
+
                 FormMenu formMenu = new FormMenu();
                 formMenu.Show();
                 this.Hide();

@@ -21,31 +21,115 @@ namespace Exámen_Mental
             TestMiniMental.PuntajesPregunta = new List<PuntajePregunta>();
         }
 
-        private bool btnOrientaGuardar_Click(object sender, EventArgs e)
+        public static string NumeroDocumento { get; set; }
+
+        private bool ValidarDatos() // Validas los campos que deben ser obligatorios
         {
-            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 1, Puntaje = int.Parse(cbo1Punt1.SelectedItem as string) });
-            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 2, Puntaje = int.Parse(cbo1Punt2.SelectedItem as string) });
-            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 3, Puntaje = int.Parse(cbo1Punt3.SelectedItem as string) });
-            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 4, Puntaje = int.Parse(cbo1Punt4.SelectedItem as string) });
-            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 5, Puntaje = int.Parse(cbo1Punt5.SelectedItem as string) });
-            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 6, Puntaje = int.Parse(cbo2Punt1.SelectedItem as string) });
-            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 7, Puntaje = int.Parse(cbo2Punt2.SelectedItem as string) });
-            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 8, Puntaje = int.Parse(cbo2Punt3.SelectedItem as string) });
-            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 9, Puntaje = int.Parse(cbo2Punt4.SelectedItem as string) });
-            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 10, Puntaje = int.Parse(cbo2Punt5.SelectedItem as string) });
-            
+            erpError.SetError(txtNumeroDocumento, null);
+            if (string.IsNullOrEmpty(txtNumeroDocumento.Text))
+            {
+                erpError.SetError(txtNumeroDocumento, "El número de documento es obligatorio");
+                return false;
+            }
+
+            var punto1 = cbo1Punt1.SelectedItem as string;
+            var punto2 = cbo1Punt2.SelectedItem as string;
+            var punto3 = cbo1Punt3.SelectedItem as string;
+            var punto4 = cbo1Punt4.SelectedItem as string;
+            var punto5 = cbo1Punt5.SelectedItem as string;
+            var punto6 = cbo2Punt1.SelectedItem as string;
+            var punto7 = cbo2Punt2.SelectedItem as string;
+            var punto8 = cbo2Punt3.SelectedItem as string;
+            var punto9 = cbo2Punt4.SelectedItem as string;
+            var punto10 = cbo2Punt5.SelectedItem as string;
+
+            erpError.SetError(cbo1Punt1, null);
+            if (string.IsNullOrEmpty(punto1))
+            {
+                erpError.SetError(cbo1Punt1, " Campo obligatorio");
+                return false;
+            }
+
+            erpError.SetError(cbo1Punt2, null);
+            if (string.IsNullOrEmpty(punto2))
+            {
+                erpError.SetError(cbo1Punt2, " Campo obligatorio");
+                return false;
+            }
+            erpError.SetError(cbo1Punt3, null);
+            if (string.IsNullOrEmpty(punto3))
+            {
+                erpError.SetError(cbo1Punt3, " Campo obligatorio");
+                return false;
+            }
+            erpError.SetError(cbo1Punt4, null);
+            if (string.IsNullOrEmpty(punto4))
+            {
+                erpError.SetError(cbo1Punt4, " Campo obligatorio");
+                return false;
+            }
+            erpError.SetError(cbo1Punt5, null);
+            if (string.IsNullOrEmpty(punto5))
+            {
+                erpError.SetError(cbo1Punt5, " Campo obligatorio");
+                return false;
+            }
+            erpError.SetError(cbo2Punt1, null);
+            if (string.IsNullOrEmpty(punto6))
+            {
+                erpError.SetError(cbo2Punt1, " Campo obligatorio");
+                return false;
+            }
+            erpError.SetError(cbo2Punt2, null);
+            if (string.IsNullOrEmpty(punto7))
+            {
+                erpError.SetError(cbo2Punt2, " Campo obligatorio");
+                return false;
+            }
+            erpError.SetError(cbo2Punt3, null);
+            if (string.IsNullOrEmpty(punto8))
+            {
+                erpError.SetError(cbo2Punt3, " Campo obligatorio");
+                return false;
+            }
+            erpError.SetError(cbo2Punt4, null);
+            if (string.IsNullOrEmpty(punto9))
+            {
+                erpError.SetError(cbo2Punt4, " Campo obligatorio");
+                return false;
+            }
+            erpError.SetError(cbo2Punt5, null);
+            if (string.IsNullOrEmpty(punto10))
+            {
+                erpError.SetError(cbo2Punt5, " Campo obligatorio");
+                return false;
+            }
+
+            return true;
+        }
+
+        private void btnOrientaSiguiente_Click_1(object sender, EventArgs e)
+        {
             try
             {
-                if (ValidarDatos)
+                if (ValidarDatos())
                 {
                     var NumeroDocumento = txtNumeroDocumento.Text.Trim();
-                    erpError.SetError(txtNumeroDocumento, null);
 
-                    if (string.IsNullOrEmpty(txtNumeroDocumento.Text))
-                    {
-                        erpError.SetError(txtNumeroDocumento, "Este campo es obligatorio");
-                        return false;
-                    }
+                    TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 1, Puntaje = int.Parse(cbo1Punt1.SelectedItem as string) });
+                    TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 2, Puntaje = int.Parse(cbo1Punt2.SelectedItem as string) });
+                    TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 3, Puntaje = int.Parse(cbo1Punt3.SelectedItem as string) });
+                    TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 4, Puntaje = int.Parse(cbo1Punt4.SelectedItem as string) });
+                    TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 5, Puntaje = int.Parse(cbo1Punt5.SelectedItem as string) });
+                    TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 6, Puntaje = int.Parse(cbo2Punt1.SelectedItem as string) });
+                    TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 7, Puntaje = int.Parse(cbo2Punt2.SelectedItem as string) });
+                    TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 8, Puntaje = int.Parse(cbo2Punt3.SelectedItem as string) });
+                    TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 9, Puntaje = int.Parse(cbo2Punt4.SelectedItem as string) });
+                    TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 10, Puntaje = int.Parse(cbo2Punt5.SelectedItem as string) });
+
+                    var form = new FormMemoria();
+                    form.Show();
+                    Hide();
                 }
                 else
 
@@ -64,56 +148,13 @@ namespace Exámen_Mental
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
-            return true;
-
         }
 
-        private bool ValidarDatos // Validas los campos que deben ser obligatorios
-        {
-            get
-            {
-            erpError.SetError(txtNumeroDocumento, null);
-            if (string.IsNullOrEmpty(txtNumeroDocumento.Text))
-            {
-                erpError.SetError(txtNumeroDocumento, "El número de documento es obligatorio");
-                return false;
-            }
-                return true;
-
-                var punto1 = cbo1Punt1.SelectedItem as string;
-                var punto2 = cbo1Punt2.SelectedItem as string;
-                var punto3 = cbo1Punt3.SelectedItem as string;
-                var punto4 = cbo1Punt4.SelectedItem as string;
-                var punto5 = cbo1Punt5.SelectedItem as string;
-                var punto6 = cbo2Punt1.SelectedItem as string;
-                var punto7 = cbo2Punt2.SelectedItem as string;
-                var punto8 = cbo2Punt3.SelectedItem as string;
-                var punto9 = cbo2Punt4.SelectedItem as string;
-                var punto10 = cbo2Punt5.SelectedItem as string;
-
-            }
-        }
-
-        public static string NumeroDocumento { get; internal set; }
-
-        private void btnOrientaSiguiente_Click_1(object sender, EventArgs e)
-        {
-            var form = new FormMemoria();
-            form.Show();
-            Hide();
-        }
-
-    private void btnOrientaVolverMenu_Click(object sender, EventArgs e)
+        private void btnOrientaVolverMenu_Click(object sender, EventArgs e)
         {
             var form = new FormMenu();
             form.Show();
             Hide();
         }
-
-    private void btnOrientaCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
     }
 }

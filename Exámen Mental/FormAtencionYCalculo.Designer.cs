@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAtencionEvocacion));
             btnAtencionCECancelar = new Button();
-            btnAtencionCEGuardar = new Button();
             gbAtencionC2 = new GroupBox();
             cbo4Puntuacion = new ComboBox();
             lblTextoAtencionC = new Label();
@@ -55,16 +54,18 @@
             btnSiguienteAtencion = new Button();
             btnAtrasAtencionCE = new Button();
             ttpMensajeAtencionCE = new ToolTip(components);
+            erpErrorACE = new ErrorProvider(components);
             gbAtencionC2.SuspendLayout();
             gbAtencionC.SuspendLayout();
             gbEvocacion.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)erpErrorACE).BeginInit();
             SuspendLayout();
             // 
             // btnAtencionCECancelar
             // 
             btnAtencionCECancelar.BackColor = SystemColors.ControlLight;
-            btnAtencionCECancelar.Location = new Point(311, 355);
+            btnAtencionCECancelar.Location = new Point(44, 390);
             btnAtencionCECancelar.Name = "btnAtencionCECancelar";
             btnAtencionCECancelar.Size = new Size(74, 33);
             btnAtencionCECancelar.TabIndex = 9;
@@ -72,18 +73,6 @@
             ttpMensajeAtencionCE.SetToolTip(btnAtencionCECancelar, "Cancelar formulario");
             btnAtencionCECancelar.UseVisualStyleBackColor = false;
             btnAtencionCECancelar.Click += btnAtencionCECancelar_Click;
-            // 
-            // btnAtencionCEGuardar
-            // 
-            btnAtencionCEGuardar.BackColor = Color.FromArgb(255, 224, 192);
-            btnAtencionCEGuardar.Location = new Point(419, 355);
-            btnAtencionCEGuardar.Name = "btnAtencionCEGuardar";
-            btnAtencionCEGuardar.Size = new Size(75, 33);
-            btnAtencionCEGuardar.TabIndex = 8;
-            btnAtencionCEGuardar.Text = "&Guardar";
-            ttpMensajeAtencionCE.SetToolTip(btnAtencionCEGuardar, "Guardar respuestas");
-            btnAtencionCEGuardar.UseVisualStyleBackColor = false;
-            btnAtencionCEGuardar.Click += btnAtencionCEGuardar_Click;
             // 
             // gbAtencionC2
             // 
@@ -291,7 +280,7 @@
             // 
             btnSiguienteAtencion.BackColor = SystemColors.Window;
             btnSiguienteAtencion.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSiguienteAtencion.Location = new Point(533, 365);
+            btnSiguienteAtencion.Location = new Point(423, 363);
             btnSiguienteAtencion.Name = "btnSiguienteAtencion";
             btnSiguienteAtencion.Size = new Size(83, 35);
             btnSiguienteAtencion.TabIndex = 18;
@@ -304,7 +293,7 @@
             // 
             btnAtrasAtencionCE.BackColor = SystemColors.Window;
             btnAtrasAtencionCE.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAtrasAtencionCE.Location = new Point(190, 367);
+            btnAtrasAtencionCE.Location = new Point(302, 365);
             btnAtrasAtencionCE.Name = "btnAtrasAtencionCE";
             btnAtrasAtencionCE.Size = new Size(78, 33);
             btnAtrasAtencionCE.TabIndex = 19;
@@ -312,6 +301,10 @@
             ttpMensajeAtencionCE.SetToolTip(btnAtrasAtencionCE, "Regresar al formulario anterior");
             btnAtrasAtencionCE.UseVisualStyleBackColor = false;
             btnAtrasAtencionCE.Click += btnAtrasAtencionCE_Click;
+            // 
+            // erpErrorACE
+            // 
+            erpErrorACE.ContainerControl = this;
             // 
             // FormAtencionEvocacion
             // 
@@ -323,7 +316,6 @@
             Controls.Add(groupBox1);
             Controls.Add(gbEvocacion);
             Controls.Add(btnAtencionCECancelar);
-            Controls.Add(btnAtencionCEGuardar);
             Controls.Add(gbAtencionC2);
             Controls.Add(gbAtencionC);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -337,13 +329,13 @@
             gbEvocacion.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)erpErrorACE).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btnAtencionCECancelar;
-        private Button btnAtencionCEGuardar;
         private GroupBox gbAtencionC2;
         private ComboBox cbo4Puntuacion;
         private Label lblTextoAtencionC;
@@ -367,5 +359,6 @@
         private Button btnSiguienteAtencion;
         private Button btnAtrasAtencionCE;
         private ToolTip ttpMensajeAtencionCE;
+        private ErrorProvider erpErrorACE;
     }
 }

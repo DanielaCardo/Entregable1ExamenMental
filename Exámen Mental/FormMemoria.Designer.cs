@@ -40,13 +40,14 @@
             lblTextoMemoria = new Label();
             lbl3Hasta3 = new Label();
             lbl3 = new Label();
-            btnMemoriaGuardar = new Button();
             btnMemoriaCancelar = new Button();
             btnSiguienteMemoria = new Button();
             btnAtrasMemoria = new Button();
             ttpMensajeMemoria = new ToolTip(components);
+            erpErrorM = new ErrorProvider(components);
             gbMemoria.SuspendLayout();
             gbMemoria2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)erpErrorM).BeginInit();
             SuspendLayout();
             // 
             // gbMemoria
@@ -151,22 +152,10 @@
             lbl3.TabIndex = 0;
             lbl3.Text = "3.";
             // 
-            // btnMemoriaGuardar
-            // 
-            btnMemoriaGuardar.BackColor = Color.FromArgb(255, 224, 192);
-            btnMemoriaGuardar.Location = new Point(421, 238);
-            btnMemoriaGuardar.Name = "btnMemoriaGuardar";
-            btnMemoriaGuardar.Size = new Size(83, 35);
-            btnMemoriaGuardar.TabIndex = 4;
-            btnMemoriaGuardar.Text = "&Guardar";
-            ttpMensajeMemoria.SetToolTip(btnMemoriaGuardar, "Guardar respuesta");
-            btnMemoriaGuardar.UseVisualStyleBackColor = false;
-            btnMemoriaGuardar.Click += btnMemoriaGuardar_Click;
-            // 
             // btnMemoriaCancelar
             // 
             btnMemoriaCancelar.BackColor = SystemColors.ControlLight;
-            btnMemoriaCancelar.Location = new Point(309, 238);
+            btnMemoriaCancelar.Location = new Point(39, 258);
             btnMemoriaCancelar.Name = "btnMemoriaCancelar";
             btnMemoriaCancelar.Size = new Size(83, 35);
             btnMemoriaCancelar.TabIndex = 5;
@@ -179,7 +168,7 @@
             // 
             btnSiguienteMemoria.BackColor = SystemColors.Window;
             btnSiguienteMemoria.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSiguienteMemoria.Location = new Point(538, 258);
+            btnSiguienteMemoria.Location = new Point(413, 248);
             btnSiguienteMemoria.Name = "btnSiguienteMemoria";
             btnSiguienteMemoria.Size = new Size(82, 35);
             btnSiguienteMemoria.TabIndex = 17;
@@ -192,7 +181,7 @@
             // 
             btnAtrasMemoria.BackColor = SystemColors.Window;
             btnAtrasMemoria.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAtrasMemoria.Location = new Point(190, 258);
+            btnAtrasMemoria.Location = new Point(284, 248);
             btnAtrasMemoria.Name = "btnAtrasMemoria";
             btnAtrasMemoria.Size = new Size(85, 35);
             btnAtrasMemoria.TabIndex = 18;
@@ -200,6 +189,10 @@
             ttpMensajeMemoria.SetToolTip(btnAtrasMemoria, "Regresar al formulario anterior");
             btnAtrasMemoria.UseVisualStyleBackColor = false;
             btnAtrasMemoria.Click += btnAtrasMemoria_Click;
+            // 
+            // erpErrorM
+            // 
+            erpErrorM.ContainerControl = this;
             // 
             // FormMemoria
             // 
@@ -209,7 +202,6 @@
             Controls.Add(btnAtrasMemoria);
             Controls.Add(btnSiguienteMemoria);
             Controls.Add(btnMemoriaCancelar);
-            Controls.Add(btnMemoriaGuardar);
             Controls.Add(gbMemoria2);
             Controls.Add(gbMemoria);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -219,6 +211,7 @@
             gbMemoria.PerformLayout();
             gbMemoria2.ResumeLayout(false);
             gbMemoria2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)erpErrorM).EndInit();
             ResumeLayout(false);
         }
 
@@ -234,10 +227,10 @@
         private Label lbl3Hasta3;
         private Label lbl3;
         private ComboBox cbo3Puntuacion;
-        private Button btnMemoriaGuardar;
         private Button btnMemoriaCancelar;
         private Button btnSiguienteMemoria;
         private Button btnAtrasMemoria;
         private ToolTip ttpMensajeMemoria;
+        private ErrorProvider erpErrorM;
     }
 }

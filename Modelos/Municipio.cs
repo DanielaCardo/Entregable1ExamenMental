@@ -1,5 +1,4 @@
-﻿using Entidades;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Modelos
@@ -10,7 +9,6 @@ namespace Modelos
         [Key]
       public int Id { get; set; }
       public string Nombre { get; set; }
-
       public int IdDepartamento { get; set; }
       public virtual Departamento Departamento { get; set;}
       public virtual ICollection<Persona> Personas { get; set; }

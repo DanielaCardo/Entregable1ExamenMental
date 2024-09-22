@@ -20,28 +20,65 @@ namespace Exámen_Mental
             TestMiniMental.PuntajesPregunta = new List<PuntajePregunta>();
         }
 
-        private void btnAtencionCEGuardar_Click(object sender, EventArgs e)
+        private bool ValidarDatos() // Validas los campos que deben ser obligatorios
         {
             var punto12 = cbo4Puntuacion.SelectedItem as string;
             var punto13 = cbo5Puntuacion.SelectedItem as string;
+            
+            erpErrorACE.SetError(cbo4Puntuacion, null);
+            if (string.IsNullOrEmpty(punto12))
+            {
+                erpErrorACE.SetError(cbo4Puntuacion, " Campo obligatorio");
+                return false;
+            }
+            erpErrorACE.SetError(cbo5Puntuacion, null);
+            if (string.IsNullOrEmpty(punto13))
+            {
+                erpErrorACE.SetError(cbo5Puntuacion, " Campo obligatorio");
+                return false;
+            }
+            return true;
 
-            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 12, Puntaje = int.Parse(cbo4Puntuacion.SelectedItem as string) });
-            TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 13, Puntaje = int.Parse(cbo5Puntuacion.SelectedItem as string) });
-            var form = new FormLenguaje();
-            form.Show();
-            Hide();
+        }
+
+        private void btnSiguienteAtencion_Click(object sender, EventArgs e)
+
+        {
+            try
+            {
+                if (ValidarDatos())
+                {
+                    TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 12, Puntaje = int.Parse(cbo4Puntuacion.SelectedItem as string) });
+                    TestMiniMental.PuntajesPregunta.Add(new PuntajePregunta() { IdPregunta = 13, Puntaje = int.Parse(cbo5Puntuacion.SelectedItem as string) });
+                    
+                    var form = new FormLenguaje();
+                    form.Show();
+                    Hide();
+                }
+
+                else
+
+                {   // Mensaje de error si la condicion anterior no se cumple
+                    MessageBox.Show("Por favor, revise los datos ingresados",
+                    this.Text,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                }
+            }
+            //Excepciones en la ejecución _ muestra un mensaje de error
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error inesperado, no fue possible realizar el registro" + ex.Message,
+                this.Text,
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            }
+       
         }
 
         private void btnAtrasAtencionCE_Click(object sender, EventArgs e)
         {
             var form = new FormMemoria();
-            form.Show();
-            Hide();
-        }
-
-        private void btnSiguienteAtencion_Click(object sender, EventArgs e)
-        {
-            var form = new FormLenguaje();
             form.Show();
             Hide();
         }

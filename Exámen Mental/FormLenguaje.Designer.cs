@@ -72,6 +72,7 @@
             btnAtrasLenguaje = new Button();
             ttpMensajeLenguaje = new ToolTip(components);
             btnVerResultado = new Button();
+            erpErrorL = new ErrorProvider(components);
             gbLenguaje2.SuspendLayout();
             gbLenguaje.SuspendLayout();
             gbLenguaje3.SuspendLayout();
@@ -80,6 +81,7 @@
             gbLenguaje6.SuspendLayout();
             gbLenguaje7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLenguajePunto11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)erpErrorL).BeginInit();
             SuspendLayout();
             // 
             // gbLenguaje2
@@ -507,6 +509,10 @@
             btnVerResultado.UseVisualStyleBackColor = false;
             btnVerResultado.Click += btnVerResultado_Click;
             // 
+            // erpErrorL
+            // 
+            erpErrorL.ContainerControl = this;
+            // 
             // FormLenguaje
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -542,6 +548,7 @@
             gbLenguaje7.ResumeLayout(false);
             gbLenguaje7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picLenguajePunto11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)erpErrorL).EndInit();
             ResumeLayout(false);
         }
 
@@ -590,5 +597,6 @@
         private Button btnAtrasLenguaje;
         private ToolTip ttpMensajeLenguaje;
         private Button btnVerResultado;
+        private ErrorProvider erpErrorL;
     }
 }

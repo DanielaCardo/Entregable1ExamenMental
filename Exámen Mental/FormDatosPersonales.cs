@@ -1,20 +1,14 @@
 ﻿using Entidades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+using Negocio;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection.Metadata;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Exámen_Mental
 {
     public partial class FormDatosPersonales : System.Windows.Forms.Form
     {
+
         public FormDatosPersonales()
         {
             InitializeComponent();
@@ -23,21 +17,21 @@ namespace Exámen_Mental
         private void btnDatosPGuardar_Click(object sender, EventArgs e)
 
         {
+            var persona = new Persona();
             try
-            {
+            { 
                 if (ValidarDatos())
 
                 {
                     // Declaracion de variables 
-                    var primerNombre = txtPrimerNombre.Text.Trim();
-                    var primerApellido = txtPrimerApellido.Text.Trim();
-                    var segundoNombre = txtSegundoNombre.Text.Trim();
-                    var segundoApellido = txtSegundoApellido.Text.Trim();
-                    var tipoDocumento = cboTipoDocumento.SelectedItem as TipoDocumento;
-                    var documento = txtNumeroDocumento.Text.Trim();
-                    var fechaNacimiento = dtpFechaNacimiento.Value;
-                    DateTime fechaActual = DateTime.Today;
-                    var sexo = rdbMasculino.Checked ?
+                    persona.PrimerNombre = txtPrimerNombre.Text.Trim();
+                    persona.PrimerApellido = txtPrimerApellido.Text.Trim();
+                    persona.SegundoNombre = txtSegundoNombre.Text.Trim();
+                    persona.SegundoApellido = txtSegundoApellido.Text.Trim();
+                    persona.TipoDocumento = cboTipoDocumento.SelectedItem as TipoDocumento;
+                    persona.NumeroDocumento = txtNumeroDocumento.Text.Trim();
+                    persona.FechaNacimiento = dtpFechaNacimiento.Value;
+                    persona.Sexo = rdbMasculino.Checked ?
                     new Sexo() { Id = (int)Entidades.Enumeraciones.Sexo.Masculino, 
                         Nombre = "Masculino" } :
                     new Sexo()
@@ -45,25 +39,14 @@ namespace Exámen_Mental
                         Id = (int)Entidades.Enumeraciones.Sexo.Femenino,
                         Nombre = "Femenino"
                     };
-                    var departamento = cboDepartamento.SelectedItem as Departamento;
-                    var municipio = cboMunicipio.SelectedItem as Municipio;
-                    var direccion = txtDireccion.Text.Trim();
-
-                    // Cadena de mensaje que contine los datos que el usuario ingresa
-                    string mensaje = $"Primer Nombre: {primerNombre} \n" +
-                                    $"Segundo Nombre: {segundoNombre} \n" +
-                                    $"Primer Apellido: {primerApellido} \n" +
-                                    $"Segundo Apellido: {segundoApellido} \n" +
-                                    $"Tipo Documento: {tipoDocumento} \n" +
-                                    $"Número de Documento: {documento} \n" +
-                                    $"Fecha de Nacimiento: {fechaNacimiento}\n" +
-                                    $"Sexo: {sexo} \n" +
-                                    $"Departamento: {departamento}\n" +
-                                    $"Municipio: {municipio}\n" +
-                                    $"Dirección:  {direccion}\n";
+                    persona.Municipio = cboMunicipio.SelectedItem as Municipio;
+                    persona.Direccion = txtDireccion.Text.Trim();
+                        
+                    IServicioPersona servicioPersona = new ServicioPersona();
+                    servicioPersona.GuardarPersona(persona);
 
                     // Muestra el mensaje con todos los datos ingresados 
-                    MessageBox.Show(mensaje, this.Text,
+                    MessageBox.Show("Los datos se guardaron exitosamente", this.Text,
                               MessageBoxButtons.OK,
                               MessageBoxIcon.Information);
                 }
@@ -137,6 +120,17 @@ namespace Exámen_Mental
             txtPrimerApellido.KeyPress += new KeyPressEventHandler(txtSoloLetras_KeyPress);
             txtSegundoApellido.KeyPress += new KeyPressEventHandler(txtSoloLetras_KeyPress);
             txtNumeroDocumento.KeyPress += new KeyPressEventHandler(txtSoloNumeros_KeyPress);
+
+            ServicioMaestro servicioMaestro = new ServicioMaestro();
+
+            cboTipoDocumento.DisplayMember = "Nombre";
+            cboTipoDocumento.DataSource = servicioMaestro.ObtenerTiposDocumento();
+
+            cboDepartamento.DisplayMember = "Nombre";
+            cboDepartamento.DataSource = servicioMaestro.ObtenerDepartamentos();
+
+            cboMunicipio.DisplayMember = "Nombre";
+            cboMunicipio.DataSource = servicioMaestro.ObtenerMunicipios();
         }
 
         private void txtSoloLetras_KeyPress(object sender, KeyPressEventArgs e)
