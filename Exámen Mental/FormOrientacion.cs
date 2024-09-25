@@ -31,6 +31,7 @@ namespace Exámen_Mental
                 erpError.SetError(txtNumeroDocumento, "El número de documento es obligatorio");
                 return false;
             }
+            NumeroDocumento = txtNumeroDocumento.Text;
 
             var punto1 = cbo1Punt1.SelectedItem as string;
             var punto2 = cbo1Punt2.SelectedItem as string;

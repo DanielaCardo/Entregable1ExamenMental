@@ -26,7 +26,7 @@ namespace Exámen_Mental
             }
 
             // Validar las credenciales ingresadas 
-            if (servicioSeguridad.ValidarUsuario(new Entidades.Usuario { Clave = txtContraseña.Text,NombreUsuario =txtUsuario.Text }))
+            if (servicioSeguridad.ValidarUsuario(new Entidades.Usuario { Clave = txtContraseña.Text, NombreUsuario = txtUsuario.Text }))
             {
                 MessageBox.Show("Ingreso exitoso", "Bienvenido a Examen Mental ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // abrir el formulario de menú

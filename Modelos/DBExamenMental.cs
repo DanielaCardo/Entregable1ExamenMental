@@ -14,7 +14,7 @@ namespace Modelos
       public DbSet<PuntajePregunta> PuntajePregunta { get; set; }
       public DbSet<TipoDocumento> TiposDocumento { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder builder)  //use sql para conectar 
+        protected override void OnConfiguring(DbContextOptionsBuilder builder)  //use sqlserver para conectar 
         {
             builder.UseSqlServer(ConfigurationManager.ConnectionStrings["ExamenMental"].ConnectionString);
         }
